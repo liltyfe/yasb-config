@@ -1,0 +1,430 @@
+watch_stylesheet: true
+watch_config: true
+debug: false
+komorebi:
+  start_command: "komorebic start --whkd"
+  stop_command: "komorebic stop --whkd"
+  reload_command: "komorebic stop --whkd && komorebic start --whkd"
+bars:
+  primary-bar:
+    enabled: true
+    screens: ["primary"]
+    class_name: "yasb-bar"
+    alignment:
+      position: "top"
+      center: false
+    blur_effect:
+      enabled: true
+      acrylic: true
+      dark_mode: true
+      round_corners: true
+      border_color: "none"
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+    dimensions:
+      width: "100%"
+      height: 32
+    padding:
+      top: 4
+      left: 6
+      bottom: 0
+      right: 6
+    widgets:
+      left: ["media", "active_window"]
+      center: ["clock","quick_launch","apps"]
+      right: ["wallpapers", "github", "taskbar", "traffic", "wifi", "cpu", "memory", "bluetooth", "whkd", "volume", "power_menu"]
+widgets:
+  update:
+    type: "yasb.update_check.UpdateCheckWidget"
+    options:
+      winget_update:
+        enabled: true
+        label: "<span>\uf0ab</span>{count}"
+        interval: 30
+        exclude: []
+      windows_update:
+        enabled: true
+        label: "<span>\uf0ab</span>{count}"
+        interval: 240
+        exclude: []
+  active_window:
+    type: "yasb.active_window.ActiveWindowWidget"
+    options:
+      label: "{win[title]}"
+      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
+      label_no_window: ""
+      label_icon: true
+      label_icon_size: 14
+      max_length: 56
+      max_length_ellipsis: "..."
+      monitor_exclusive: false
+  media:
+    type: "yasb.media.MediaWidget"
+    options:
+      label: "{title}{s}{artist}"
+      label_alt: "{artist}{s}{title}"
+      separator: " - "
+      hide_empty: true
+      show_thumbnail: true
+      controls_only: false
+      controls_left: true
+      controls_hide: false
+      thumbnail_alpha: 70
+      thumbnail_padding: 6
+      thumbnail_corner_radius: 10
+      symmetric_corner_radius: true
+      thumbnail_edge_fade: true
+      max_field_size:
+        label: 28
+        label_alt: 34
+        truncate_whole_label: true
+      icons:
+        prev_track: "\uf048"
+        next_track: "\uf051"
+        play: "\uf04b"
+        pause: "\uf04c"
+      scrolling_label:
+        enabled: true
+        update_interval_ms: 35
+        style: "left"
+        separator: "  •  "
+        label_padding: 1
+        always_scroll: false
+      progress_bar:
+        enabled: true
+        alignment: "bottom"
+      callbacks:
+        on_left: "toggle_play_pause"
+        on_middle: "toggle_label"
+        on_right: "toggle_media_menu"
+      media_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "none"
+        alignment: "left"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        thumbnail_corner_radius: 10
+        thumbnail_size: 120
+        max_title_size: 48
+        max_artist_size: 28
+        show_source: true
+        show_volume_slider: true
+      media_menu_icons:
+        play: "\uf04b"
+        pause: "\uf04c"
+        prev_track: "\uf048"
+        next_track: "\uf051"
+        mute: "\uf6a9"
+        unmute: "\uf028"
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%a, %d %b %H:%M}" 
+      label_alt: "{%A, %d %B %Y %H:%M:%S}"
+      timezones: []
+      calendar: 
+        alignment: "center"
+        offset_top: 6
+  quick_launch:
+    type: "yasb.quick_launch.QuickLaunchWidget"
+    options:
+      label: "<span>\uf002</span>"
+      search_placeholder: "Search apps, files, settings..."
+      max_results: 18
+      show_icons: true
+      icon_size: 28
+      home_page: true
+      compact_text: false
+      popup:
+        width: 760
+        height: 520
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "#b4befe"
+        dark_mode: true
+      callbacks:
+        on_left: "toggle_quick_launch"
+      keybindings:
+        - keys: "alt+space"
+          action: "toggle_quick_launch"
+  komorebi_workspaces:
+    type: "komorebi.workspaces.WorkspaceWidget"
+    options:
+      label_offline: "\u23fc Offline"
+      label_workspace_btn: "\udb81\udc3d"
+      label_workspace_active_btn: ""
+      label_workspace_populated_btn: "\udb81\udc3e"
+      label_default_name: "{index}"
+      label_zero_index: false
+      hide_empty_workspaces: false
+      hide_if_offline: true
+      animation: true
+  komorebi_active_layout:
+    type: "komorebi.active_layout.ActiveLayoutWidget"
+    options:
+      hide_if_offline: true
+      label: "{icon}"
+      layouts:
+        [
+          "bsp",
+          "columns",
+          "rows",
+          "grid",
+          "vertical_stack",
+          "horizontal_stack",
+          "ultrawide_vertical_stack",
+          "right_main_vertical_stack",
+        ]
+      layout_icons:
+        bsp: "BSP"
+        columns: "COLS"
+        rows: "ROWS"
+        grid: "GRID"
+        vertical_stack: "V-STACK"
+        horizontal_stack: "H-STACK"
+        ultrawide_vertical_stack: "W-STACK"
+        right_main_vertical_stack: "RMV-STACK"
+        monocle: "MONOCLE"
+        maximised: "MAX"
+        floating: "FLOATING"
+        paused: "PAUSED"
+      callbacks:
+        on_left: "next_layout"
+        on_middle: "toggle_monocle"
+        on_right: "prev_layout"
+  weather:
+    type: "yasb.weather.WeatherWidget"
+    options:
+      label: "<span>{icon}</span> {temp}"
+      label_alt: "{location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}"
+      api_key: env
+      update_interval: 600
+      hide_decimal: true
+      location: env
+      callbacks:
+        on_left: "toggle_label"
+      icons:
+        sunnyDay: "\udb81\udd99"
+        clearNight: "\udb81\udd99"
+        cloudyDay: "\udb81\udd99"
+        cloudyNight: "\udb81\udd99"
+        rainyDay: "\udb81\udd99"
+        rainyNight: "\udb81\udd99"
+        snowyDay: "\udb81\udd99"
+        snowyNight: "\udb81\udd99"
+        blizzardDay: "\udb81\udd99"
+        default: "\udb81\udd99"
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      label_alt: "{volume}"
+      volume_icons:
+        - "\ueee8"
+        - "\uf026"
+        - "\uf027"
+        - "\uf027"
+        - "\uf028"
+      callbacks:
+        on_right: "exec cmd.exe /c start ms-settings:sound"
+  power_menu:
+    type: "yasb.power_menu.PowerMenuWidget"
+    options:
+      label: "\uf011"
+      uptime: True
+      blur: False
+      blur_background: True
+      animation_duration: 200
+      button_row: 5
+      buttons:
+        shutdown: ["\uf011", "Shut Down"]
+        restart: ["\uead2", "Restart"]
+        signout: ["\udb80\udf43", "Sign out"]
+        hibernate: ["\uf28e", "Hibernate"]
+        sleep: ["\u23fe", "Sleep"]
+        cancel: ["", "Cancel"]
+  apps:
+    type: "yasb.applications.ApplicationsWidget"
+    options:
+      label: "{data}"
+      app_list:
+        - { icon: "\uf489", launch: "wt" }
+        - { icon: "\uf001", launch: '<PATH_TO_QQMUSIC_EXE>' }
+        - { icon: "\udb82\ude1e", launch: '<PATH_TO_VSCODE_EXE>' }
+        - { icon: "\udb80\ude39", launch: '<PATH_TO_BROWSER_EXE>'}
+        - { icon: "\uf07b", launch: 'explorer' }
+        - { icon: "\uf1d6", launch: '<PATH_TO_QQ_EXE>' }
+        - { icon: "\uf1d7", launch: '<PATH_TO_WECHAT_EXE>'}
+        - { icon: "\udb81\udd0a", launch: '<PATH_TO_CLASH_NYANPASU_EXE>' }
+  github:
+    type: "yasb.github.GithubWidget"
+    options:
+      label: "<span>\ueba1</span>"
+      label_alt: "Notifications {data}"
+      token: env
+      max_notification: 30
+      only_unread: false
+      max_field_size: 54
+      update_interval: 60
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      animation:
+        enabled: true
+      icon_size: 16
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: []
+  ai:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "<span>\udb81\ude74</span>"
+      label_alt: "\udb81\ude74"
+      class_name: "ai-widget"
+      callbacks:
+        on_left: 'exec cmd.exe /c start "" "<PATH_TO_BROWSER_EXE>" https://platform.openai.com/playground/chat?models=gpt-4o'
+  whkd:
+    type: "yasb.whkd.WhkdWidget"
+    options:
+      label: "<span>\uf11c</span>"
+  wallpapers:
+    type: "yasb.wallpapers.WallpapersWidget"
+    options:
+      label: "<span>\udb83\ude09</span>"
+      image_path: "<PATH_TO_WALLPAPER_DIRECTORY>"
+      change_automatically: false
+      update_interval: 60
+      gallery:
+        enabled: true
+        blur: true
+        image_width: 296
+        image_per_page: 6
+        show_buttons: false
+        orientation: "portrait"
+        image_spacing: 10
+        lazy_load: true
+        lazy_load_delay: 10
+        lazy_load_fadein: 200
+        image_corner_radius: 20
+        enable_cache: true
+  traffic:
+    type: "yasb.traffic.TrafficWidget"
+    options:
+      label: "<span>\ueb01</span> ↓{download_speed} ↑{upload_speed}"
+      label_alt: "下载 {download_speed} | 上传 {upload_speed}"
+      update_interval: 1000
+      speed_unit: "bytes"
+      hide_decimal: true
+      hide_if_offline: false
+      callbacks:
+        on_left: "toggle_menu"
+        on_right: "toggle_label"
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "none"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_interface_name: true
+        show_internet_info: true
+  cpu:
+    type: "yasb.cpu.CpuWidget"
+    options:
+      label: "<span>\uf4bc</span> CPU {info[percent][total]}%"
+      label_alt: "<span>\uf437</span> {info[freq][current]}MHz"
+      update_interval: 2000
+      hide_decimal: true
+      cpu_thresholds:
+        low: 25
+        medium: 50
+        high: 90
+      callbacks:
+        on_left: "toggle_label"
+        on_right: "toggle_menu"
+      menu:
+        enabled: true
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "none"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_graph: true
+        show_graph_grid: true
+        graph_history_size: 60
+  memory:
+    type: "yasb.memory.MemoryWidget"
+    options:
+      label: "<span>\uefc5</span> RAM {virtual_mem_percent}%"
+      label_alt: "<span>\uefc5</span> {virtual_mem_used}/{virtual_mem_total}"
+      update_interval: 5000
+      hide_decimal: true
+      memory_thresholds:
+        low: 25
+        medium: 50
+        high: 90
+      callbacks:
+        on_left: "toggle_label"
+        on_right: "toggle_menu"
+      menu:
+        enabled: true
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "none"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        show_graph: true
+        show_graph_grid: true
+        graph_history_size: 60
+  bluetooth:
+    type: "yasb.bluetooth.BluetoothWidget"
+    options:
+      label: "<span>{icon}</span> {device_count}"
+      label_alt: "{device_name}"
+      label_no_device: "No device"
+      label_device_separator: ", "
+      max_length: 18
+      max_length_ellipsis: "..."
+      tooltip: true
+      icons:
+        bluetooth_on: "\udb80\udcaf"
+        bluetooth_off: "\udb80\udcb2"
+        bluetooth_connected: "\udb80\udcb1"
+      callbacks:
+        on_left: "toggle_label"
+        on_right: "exec cmd.exe /c start ms-settings:bluetooth"
+  wifi:
+    type: "yasb.wifi.WifiWidget"
+    options:
+      label: "<span>{wifi_icon}</span> {wifi_strength}%"
+      label_alt: "<span>{wifi_icon}</span> {wifi_name}"
+      update_interval: 5000
+
+      ethernet_label: "<span>\ueba9</span>"
+      ethernet_label_alt: "<span>\ueba9</span> {ip_addr}"
+
+      wifi_icons:
+        - "\udb82\udd2e"
+        - "\udb82\udd1f"
+        - "\udb82\udd22"
+        - "\udb82\udd25"
+        - "\udb82\udd28"
+
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "exec cmd.exe /c start ms-settings:network"
+        on_right: "exec cmd.exe /c start ms-settings:network-wifi"

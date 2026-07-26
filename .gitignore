@@ -1,0 +1,5 @@
+.env
+*.log
+__pycache__/
+*.py[cod]
+Typora_Hook_Log.txt
