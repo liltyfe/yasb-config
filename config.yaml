@@ -1,6 +1,7 @@
 watch_stylesheet: true
 watch_config: true
 debug: false
+system_colors: true
 komorebi:
   start_command: "komorebic start --whkd"
   stop_command: "komorebic stop --whkd"
@@ -12,10 +13,8 @@ bars:
     class_name: "yasb-bar"
     alignment:
       position: "top"
-      center: false
     blur_effect:
       enabled: true
-      acrylic: true
       dark_mode: true
       round_corners: true
       border_color: "none"
@@ -33,8 +32,44 @@ bars:
     widgets:
       left: ["media", "active_window"]
       center: ["clock","quick_launch","apps"]
-      right: ["wallpapers", "github", "taskbar", "traffic", "wifi", "cpu", "memory", "bluetooth", "whkd", "volume", "power_menu"]
+      right: ["wallpapers", "github", "window_switcher", "taskbar", "traffic", "wifi", "cpu", "memory", "bluetooth", "dnd", "whkd", "volume", "power_menu"]
 widgets:
+  dnd:
+    type: "yasb.dnd.DndWidget"
+    options:
+      label: "<span>{icon}</span>"
+      label_alt: "<span>{icon}</span> {status}"
+      tooltip: true
+      default_active_mode: "priority"
+      callbacks:
+        on_left: "toggle_status"
+        on_middle: "toggle_label"
+        on_right: "cycle_status"
+      icons:
+        disabled: "\uf0f3"
+        priority: "\uf186"
+        alarms: "\uf1f6"
+  window_switcher:
+    type: "yasb.window_switcher.WindowSwitcherWidget"
+    options:
+      label: "<span>\uf2d2</span>"
+      icon_size: 48
+      max_visible_apps: 6
+      show_title: true
+      callbacks:
+        on_left: "toggle_window_switcher"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
+      popup:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        dark_mode: true
+      keybindings:
+        - keys: "alt+w"
+          action: "toggle_window_switcher"
+          screen: "cursor"
   update:
     type: "yasb.update_check.UpdateCheckWidget"
     options:
@@ -163,7 +198,6 @@ widgets:
       label_zero_index: false
       hide_empty_workspaces: false
       hide_if_offline: true
-      animation: true
   komorebi_active_layout:
     type: "komorebi.active_layout.ActiveLayoutWidget"
     options:
@@ -190,7 +224,7 @@ widgets:
         ultrawide_vertical_stack: "W-STACK"
         right_main_vertical_stack: "RMV-STACK"
         monocle: "MONOCLE"
-        maximised: "MAX"
+        maximized: "MAX"
         floating: "FLOATING"
         paused: "PAUSED"
       callbacks:
@@ -224,7 +258,7 @@ widgets:
     options:
       label: "<span>{icon}</span> {level}"
       label_alt: "{volume}"
-      volume_icons:
+      icons:
         - "\ueee8"
         - "\uf026"
         - "\uf027"
@@ -254,13 +288,13 @@ widgets:
       label: "{data}"
       app_list:
         - { icon: "\uf489", launch: "wt" }
-        - { icon: "\uf001", launch: '<PATH_TO_QQMUSIC_EXE>' }
-        - { icon: "\udb82\ude1e", launch: '<PATH_TO_VSCODE_EXE>' }
-        - { icon: "\udb80\ude39", launch: '<PATH_TO_BROWSER_EXE>'}
+        - { icon: "\uf001", launch: 'C:\Users\az_ha\Tools\QQMusic\QQMusic.exe' }
+        - { icon: "\udb82\ude1e", launch: 'C:\Users\az_ha\Tools\MICROS~1\Code.exe' }
+        - { icon: "\udb80\ude39", launch: 'C:\PROGRA~1\MOZILL~1\firefox.exe'}
         - { icon: "\uf07b", launch: 'explorer' }
-        - { icon: "\uf1d6", launch: '<PATH_TO_QQ_EXE>' }
-        - { icon: "\uf1d7", launch: '<PATH_TO_WECHAT_EXE>'}
-        - { icon: "\udb81\udd0a", launch: '<PATH_TO_CLASH_NYANPASU_EXE>' }
+        - { icon: "\uf1d6", launch: 'C:\PROGRA~1\Tencent\QQNT\QQ.exe' }
+        - { icon: "\uf1d7", launch: 'C:\PROGRA~1\Tencent\Weixin\Weixin.exe'}
+        - { icon: "\udb81\udd0a", launch: 'C:\PROGRA~1\CLASHN~1\CLASHN~1.EXE' }
   github:
     type: "yasb.github.GithubWidget"
     options:
@@ -288,7 +322,7 @@ widgets:
       label_alt: "\udb81\ude74"
       class_name: "ai-widget"
       callbacks:
-        on_left: 'exec cmd.exe /c start "" "<PATH_TO_BROWSER_EXE>" https://platform.openai.com/playground/chat?models=gpt-4o'
+        on_left: 'exec cmd.exe /c start "" "C:\Program Files\Mozilla Firefox\firefox.exe" https://platform.openai.com/playground/chat?models=gpt-4o'
   whkd:
     type: "yasb.whkd.WhkdWidget"
     options:
@@ -297,7 +331,7 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\udb83\ude09</span>"
-      image_path: "<PATH_TO_WALLPAPER_DIRECTORY>"
+      image_path: "C:\\Users\\az_ha\\wallpapers"
       change_automatically: false
       update_interval: 60
       gallery:
@@ -309,10 +343,8 @@ widgets:
         orientation: "portrait"
         image_spacing: 10
         lazy_load: true
-        lazy_load_delay: 10
         lazy_load_fadein: 200
         image_corner_radius: 20
-        enable_cache: true
   traffic:
     type: "yasb.traffic.TrafficWidget"
     options:

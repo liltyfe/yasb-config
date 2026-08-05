@@ -1,30 +1,32 @@
+@import "yasb_colors.css";
+
 :root {
-    --rosewater: #f5e0dc;
-    --flamingo: #f2cdcd;
-    --pink: #f5c2e7;
-    --mauve: #cba6f7;
+    --rosewater: var(--yasb-accent-light3);
+    --flamingo: var(--yasb-accent-light2);
+    --pink: var(--yasb-accent-light1);
+    --mauve: var(--yasb-accent);
     --red: #f38ba8;
-    --maroon: #eba0ac;
+    --maroon: var(--yasb-accent-dark1);
     --peach: #fab387;
     --yellow: #f9e2af;
     --green: #a6e3a1;
-    --teal: #94e2d5;
-    --sky: #89dceb;
-    --sapphire: #74c7ec;
-    --blue: #89b4fa;
-    --lavender: #b4befe;
-    --text: #cdd6f4;
-    --subtext1: #bac2de;
-    --subtext0: #a6adc8;
-    --overlay2: #9399b2;
-    --overlay1: #7f849c;
-    --overlay0: #6c7086;
-    --surface2: #585b70;
-    --surface1: #45475a;
-    --surface0: #282936;
-    --base: #1e1e2e;
-    --mantle: rgba(24, 24, 37, 0.35);
-    --crust: rgba(17, 17, 27, 0.35);
+    --teal: var(--yasb-accent-light2);
+    --sky: var(--yasb-accent-light1);
+    --sapphire: var(--yasb-accent);
+    --blue: var(--yasb-accent);
+    --lavender: var(--yasb-accent-light2);
+    --text: var(--yasb-foreground);
+    --subtext1: var(--yasb-foreground);
+    --subtext0: var(--yasb-foreground);
+    --overlay2: var(--yasb-accent-light3);
+    --overlay1: var(--yasb-accent-light2);
+    --overlay0: var(--yasb-accent-light1);
+    --surface2: var(--yasb-accent-dark1);
+    --surface1: var(--yasb-accent-dark2);
+    --surface0: var(--yasb-accent-dark3);
+    --base: var(--yasb-background);
+    --mantle: rgba(var(--yasb-background-rgb), 0.35);
+    --crust: rgba(var(--yasb-background-rgb), 0.35);
 }
 *{
 	font-size: 12px;
@@ -678,13 +680,13 @@
 }
 
 .traffic-widget .widget-container {
-    min-width: 190px;
-    max-width: 190px;
+    min-width: 170px;
+    max-width: 170px;
 }
 
 .traffic-widget .label {
-    min-width: 168px;
-    max-width: 168px;
+    min-width: 148px;
+    max-width: 148px;
 }
 
 
@@ -804,4 +806,63 @@
 .wifi-widget .label span {
     position: relative;
     top: -1px;
+}
+
+/* ==============================
+   Do Not Disturb / Window Switcher
+============================== */
+
+.dnd-widget,
+.window-switcher-widget {
+    padding: 0 6px;
+}
+
+.dnd-widget .widget-container,
+.window-switcher-widget .widget-container {
+    background-color: var(--crust);
+    margin: 4px 0;
+    border-radius: 12px;
+    padding: 0 8px;
+}
+
+.dnd-widget .label,
+.window-switcher-widget .label {
+    color: var(--yasb-foreground);
+    font-size: 14px;
+}
+
+.dnd-widget .icon.status-priority,
+.dnd-widget .icon.status-alarms,
+.dnd-widget .label.status-priority,
+.dnd-widget .label.status-alarms,
+.window-switcher-widget .icon {
+    color: var(--yasb-accent);
+}
+
+.window-switcher-popup {
+    background-color: rgba(var(--yasb-background-rgb), 0.82);
+    padding: 10px;
+}
+
+.window-switcher-popup .item {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.window-switcher-popup .item:hover,
+.window-switcher-popup .item.active {
+    background-color: rgba(var(--yasb-accent-rgb), 0.18);
+    border: 1px solid rgba(var(--yasb-accent-rgb), 0.45);
+}
+
+.window-switcher-popup .title {
+    color: var(--yasb-foreground);
+    border-top: 1px solid rgba(var(--yasb-accent-rgb), 0.35);
+    padding: 10px 10px 5px 10px;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 600;
 }
