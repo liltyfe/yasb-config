@@ -163,21 +163,23 @@
     color: var(--text);
 }
 .quick-launch-popup .container {
-    background-color: rgba(17, 17, 27, 0.64);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 18px;
+    background-color: rgba(var(--yasb-background-rgb), 0.24);
+    border: 1px solid rgba(var(--yasb-foreground-rgb), 0.20);
+    border-radius: 26px;
 }
 .quick-launch-popup .search {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+    background-color: rgba(var(--yasb-foreground-rgb), 0.14);
+    border: 1px solid rgba(var(--yasb-foreground-rgb), 0.22);
+    border-radius: 22px;
+    margin: 12px 14px 8px 14px;
     padding: 14px 18px;
 }
 .quick-launch-popup .search .loader-line {
-    color: var(--blue);
+    color: var(--yasb-accent);
 }
 .quick-launch-popup .search .search-icon,
 .quick-launch-popup .search .search-submit-icon {
-    color: rgba(205, 214, 244, 0.72);
+    color: rgba(var(--yasb-foreground-rgb), 0.72);
     font-family: "Segoe Fluent Icons", "Segoe MDL2 Assets";
     font-size: 18px;
     min-width: 18px;
@@ -188,15 +190,15 @@
     border: none;
     color: var(--text);
     font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     padding: 6px 0;
-    selection-background-color: var(--blue);
+    selection-background-color: var(--yasb-accent);
 }
 .quick-launch-popup .search .prefix {
-    background: rgba(255, 255, 255, 0.11);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 6px;
+    background: rgba(var(--yasb-accent-rgb), 0.22);
+    border: 1px solid rgba(var(--yasb-accent-rgb), 0.48);
+    border-radius: 8px;
     color: var(--text);
     font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
     font-size: 12px;
@@ -205,7 +207,10 @@
     padding: 1px 8px 2px 8px;
 }
 .quick-launch-popup .results {
-    background: transparent;
+    background-color: rgba(var(--yasb-background-rgb), 0.22);
+    border: 1px solid rgba(var(--yasb-foreground-rgb), 0.16);
+    border-radius: 22px;
+    margin: 8px 14px 14px 14px;
     padding: 10px;
 }
 .quick-launch-popup .results-list-view {
@@ -218,49 +223,52 @@
     outline: none;
 }
 .quick-launch-popup .results-list-view .description {
-    color: rgba(186, 194, 222, 0.72);
+    color: rgba(var(--yasb-foreground-rgb), 0.62);
     font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
     font-size: 12px;
     font-weight: 500;
 }
 .quick-launch-popup .results-list-view .separator {
-    color: rgba(186, 194, 222, 0.58);
+    color: rgba(var(--yasb-foreground-rgb), 0.54);
     font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
     font-size: 12px;
     font-weight: 600;
     padding: 4px 0 4px 12px;
 }
 .quick-launch-popup .results-list-view::item {
-    border-radius: 11px;
-    margin: 2px 0;
-    padding: 10px 12px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    margin: 3px 0;
+    padding: 11px 14px;
 }
 .quick-launch-popup .results-list-view::item:hover,
 .quick-launch-popup .results-list-view::item:selected {
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(var(--yasb-foreground-rgb), 0.13);
+    border: 1px solid rgba(var(--yasb-accent-rgb), 0.50);
 }
 .quick-launch-popup .results-empty-text {
-    color: rgba(205, 214, 244, 0.86);
+    color: rgba(var(--yasb-foreground-rgb), 0.84);
     font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
     font-size: 20px;
     font-weight: 600;
     padding-top: 18px;
 }
 .quick-launch-popup .preview {
-    background: rgba(255, 255, 255, 0.055);
-    border-left: 1px solid rgba(255, 255, 255, 0.09);
+    background-color: rgba(var(--yasb-accent-rgb), 0.07);
+    border-left: 1px solid rgba(var(--yasb-foreground-rgb), 0.12);
 }
 .quick-launch-popup .preview .preview-text,
 .quick-launch-popup .preview .preview-image {
-    background-color: rgba(255, 255, 255, 0.055);
+    background-color: rgba(var(--yasb-foreground-rgb), 0.04);
     border: none;
-    color: rgba(205, 214, 244, 0.88);
+    color: rgba(var(--yasb-foreground-rgb), 0.88);
     font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
     font-size: 13px;
     padding: 8px 12px;
 }
 .quick-launch-popup .preview .preview-meta {
-    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    border-top: 1px solid rgba(var(--yasb-foreground-rgb), 0.12);
     font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
     padding: 8px 12px;
 }
@@ -271,7 +279,7 @@
     margin-bottom: 8px;
 }
 .quick-launch-popup .preview .preview-meta .preview-subtitle {
-    color: rgba(186, 194, 222, 0.78);
+    color: rgba(var(--yasb-foreground-rgb), 0.68);
     font-size: 12px;
     font-weight: 500;
 }
@@ -842,29 +850,33 @@
 }
 
 .window-switcher-popup {
-    background-color: rgba(var(--yasb-background-rgb), 0.82);
-    padding: 10px;
+    background-color: rgba(var(--yasb-background-rgb), 0.38);
+    border: 1px solid rgba(var(--yasb-foreground-rgb), 0.20);
+    border-radius: 18px;
+    padding: 12px;
 }
 
 .window-switcher-popup .item {
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    margin: 5px;
-    padding: 10px;
+    background-color: rgba(var(--yasb-foreground-rgb), 0.035);
+    border: 1px solid rgba(var(--yasb-foreground-rgb), 0.08);
+    border-radius: 14px;
+    margin: 6px;
+    padding: 12px;
 }
 
 .window-switcher-popup .item:hover,
 .window-switcher-popup .item.active {
-    background-color: rgba(var(--yasb-accent-rgb), 0.18);
-    border: 1px solid rgba(var(--yasb-accent-rgb), 0.45);
+    background-color: rgba(var(--yasb-accent-rgb), 0.24);
+    border: 1px solid rgba(var(--yasb-accent-rgb), 0.72);
 }
 
 .window-switcher-popup .title {
     color: var(--yasb-foreground);
-    border-top: 1px solid rgba(var(--yasb-accent-rgb), 0.35);
-    padding: 10px 10px 5px 10px;
-    margin-top: 10px;
+    background-color: rgba(var(--yasb-foreground-rgb), 0.035);
+    border-top: 1px solid rgba(var(--yasb-foreground-rgb), 0.14);
+    border-radius: 8px;
+    padding: 10px 12px 6px 12px;
+    margin-top: 12px;
     font-size: 12px;
     font-weight: 600;
 }

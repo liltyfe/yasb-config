@@ -180,7 +180,7 @@ widgets:
         blur: true
         round_corners: true
         round_corners_type: "normal"
-        border_color: "#b4befe"
+        border_color: "system"
         dark_mode: true
       callbacks:
         on_left: "toggle_quick_launch"
