@@ -187,6 +187,7 @@ widgets:
       keybindings:
         - keys: "alt+space"
           action: "toggle_quick_launch"
+          screen: "primary"
   komorebi_workspaces:
     type: "komorebi.workspaces.WorkspaceWidget"
     options:
