@@ -288,13 +288,13 @@ widgets:
       label: "{data}"
       app_list:
         - { icon: "\uf489", launch: "wt" }
-        - { icon: "\uf001", launch: 'C:\Users\az_ha\Tools\QQMusic\QQMusic.exe' }
-        - { icon: "\udb82\ude1e", launch: 'C:\Users\az_ha\Tools\MICROS~1\Code.exe' }
-        - { icon: "\udb80\ude39", launch: 'C:\PROGRA~1\MOZILL~1\firefox.exe'}
+        - { icon: "\uf001", launch: 'QQMusic.exe' }
+        - { icon: "\udb82\ude1e", launch: 'Code.exe' }
+        - { icon: "\udb80\ude39", launch: 'firefox.exe'}
         - { icon: "\uf07b", launch: 'explorer' }
-        - { icon: "\uf1d6", launch: 'C:\PROGRA~1\Tencent\QQNT\QQ.exe' }
-        - { icon: "\uf1d7", launch: 'C:\PROGRA~1\Tencent\Weixin\Weixin.exe'}
-        - { icon: "\udb81\udd0a", launch: 'C:\PROGRA~1\CLASHN~1\CLASHN~1.EXE' }
+        - { icon: "\uf1d6", launch: 'QQ.exe' }
+        - { icon: "\uf1d7", launch: 'Weixin.exe'}
+        - { icon: "\udb81\udd0a", launch: 'CLASHN~1.EXE' }
   github:
     type: "yasb.github.GithubWidget"
     options:
@@ -331,7 +331,7 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\udb83\ude09</span>"
-      image_path: "C:\\Users\\az_ha\\wallpapers"
+      image_path: "wallpapers"
       change_automatically: false
       update_interval: 60
       engine:
