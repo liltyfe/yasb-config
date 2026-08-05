@@ -288,13 +288,13 @@ widgets:
       label: "{data}"
       app_list:
         - { icon: "\uf489", launch: "wt" }
-        - { icon: "\uf001", launch: 'QQMusic.exe' }
-        - { icon: "\udb82\ude1e", launch: 'Code.exe' }
-        - { icon: "\udb80\ude39", launch: 'firefox.exe'}
+        - { icon: "\uf001", launch: 'C:\Users\az_ha\Tools\QQMusic\QQMusic.exe' }
+        - { icon: "\udb82\ude1e", launch: 'C:\Users\az_ha\Tools\MICROS~1\Code.exe' }
+        - { icon: "\udb80\ude39", launch: 'C:\PROGRA~1\MOZILL~1\firefox.exe'}
         - { icon: "\uf07b", launch: 'explorer' }
-        - { icon: "\uf1d6", launch: 'QQ.exe' }
-        - { icon: "\uf1d7", launch: 'Weixin.exe'}
-        - { icon: "\udb81\udd0a", launch: 'CLASHN~1.EXE' }
+        - { icon: "\uf1d6", launch: 'C:\PROGRA~1\Tencent\QQNT\QQ.exe' }
+        - { icon: "\uf1d7", launch: 'C:\PROGRA~1\Tencent\Weixin\Weixin.exe'}
+        - { icon: "\udb81\udd0a", launch: 'C:\PROGRA~1\CLASHN~1\CLASHN~1.EXE' }
   github:
     type: "yasb.github.GithubWidget"
     options:
@@ -331,20 +331,32 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\udb83\ude09</span>"
-      image_path: "wallpapers"
+      image_path: "C:\\Users\\az_ha\\wallpapers"
       change_automatically: false
       update_interval: 60
+      engine:
+        enabled: true
+        animation: "circle"
+      keybindings:
+        - keys: "alt+p"
+          action: "toggle_gallery"
+          screen: "cursor"
       gallery:
         enabled: true
         blur: true
-        image_width: 296
-        image_per_page: 6
+        image_width: 640
+        image_per_page: 1
+        gallery_columns: 1
+        horizontal_position: "center"
+        vertical_position: "center"
+        position_offset: 32
+        respect_work_area: true
         show_buttons: false
-        orientation: "portrait"
-        image_spacing: 10
+        orientation: "landscape"
+        image_spacing: 16
         lazy_load: true
-        lazy_load_fadein: 200
-        image_corner_radius: 20
+        lazy_load_fadein: 220
+        image_corner_radius: 18
   traffic:
     type: "yasb.traffic.TrafficWidget"
     options:
