@@ -415,7 +415,7 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\udb83\ude09</span>"
-      image_path: "wallpapers"
+      image_path: 'wallpapers'
       change_automatically: false
       update_interval: 60
       engine:

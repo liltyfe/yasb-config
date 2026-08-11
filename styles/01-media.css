@@ -53,34 +53,192 @@
 }
 
 .media-menu {
-    background-color: rgba(17, 17, 27, 0.75);
-    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 18px;
+    box-shadow: none;
+    max-width: 460px;
+    min-width: 460px;
+}
+
+.media-menu .thumbnail {
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow: none;
 }
 
 .media-menu .title,
 .media-menu .artist,
 .media-menu .source {
-    font-family: "Segoe UI";
-    color: var(--text);
+    font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei";
+    margin-left: 14px;
 }
 
-.media-menu .artist,
+.media-menu .title {
+    color: rgba(255, 255, 255, 0.98);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.media-menu .artist {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
 .media-menu .source {
-    color: var(--subtext0);
+    background-color: rgba(255, 255, 255, 0.14);
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 10px;
+    margin-top: 10px;
+    padding: 2px 6px;
 }
 
 .media-menu .btn {
-    color: var(--subtext0);
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.86);
+    font-family: "Segoe Fluent Icons";
+    font-size: 15px;
+    margin: 10px 2px 0 2px;
+    max-height: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+}
+
+.media-menu .btn:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    border: none;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.media-menu .btn:clicked,
+.media-menu .btn:pressed {
+    background-color: rgba(255, 255, 255, 0.20);
+    box-shadow: none;
+    opacity: 0.72;
+}
+
+.media-menu .btn.play {
+    background-color: rgba(255, 255, 255, 0.92);
+    color: rgba(20, 20, 24, 0.94);
+    font-size: 20px;
+}
+
+.media-menu .btn.disabled,
+.media-menu .btn.disabled:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.34);
+    opacity: 1;
+}
+
+.media-menu .media-timeline-container {
     background-color: transparent;
     border: none;
 }
 
-.media-menu .btn:hover {
-    color: var(--text);
+.media-menu .playback-time {
+    color: rgba(255, 255, 255, 0.64);
+    font-family: "Segoe UI Variable", "Segoe UI";
+    font-size: 11px;
+    margin-top: 16px;
+    min-width: 76px;
 }
 
-.media-menu .btn.play,
-.media-menu .btn.pause {
-    color: var(--blue);
+.media-menu .progress-slider {
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    height: 10px;
+    margin: 5px 4px;
 }
 
+.media-menu .progress-slider::groove {
+    background-color: rgba(255, 255, 255, 0.18);
+    border: none;
+    border-radius: 3px;
+    height: 3px;
+}
+
+.media-menu .progress-slider::groove:hover {
+    background-color: rgba(255, 255, 255, 0.26);
+    height: 5px;
+}
+
+.media-menu .progress-slider::sub-page {
+    background-color: rgba(255, 255, 255, 0.94);
+    border: none;
+    border-radius: 3px;
+}
+
+.media-menu .progress-slider::handle {
+    background-color: rgba(255, 255, 255, 0.96);
+    border: none;
+    border-radius: 5px;
+    height: 10px;
+    margin: -4px 0;
+    width: 10px;
+}
+
+.media-menu .app-volume-container {
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: none;
+    margin-left: 12px;
+    padding: 8px 6px;
+}
+
+.media-menu .app-volume-container .volume-slider {
+    background-color: transparent;
+    border: none;
+}
+
+.media-menu .app-volume-container .volume-slider::groove {
+    background-color: rgba(255, 255, 255, 0.18);
+    border: none;
+    border-radius: 3px;
+    width: 3px;
+}
+
+.media-menu .app-volume-container .volume-slider::sub-page {
+    background-color: rgba(255, 255, 255, 0.22);
+    border-radius: 3px;
+}
+
+.media-menu .app-volume-container .volume-slider::add-page {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 3px;
+}
+
+.media-menu .app-volume-container .volume-slider::handle {
+    background-color: rgba(255, 255, 255, 0.96);
+    border: none;
+    border-radius: 5px;
+    height: 10px;
+    margin: 0 -4px;
+    width: 10px;
+}
+
+.media-menu .app-volume-container .mute-button,
+.media-menu .app-volume-container .unmute-button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.86);
+    font-family: "Segoe Fluent Icons";
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.media-menu .app-volume-container .unmute-button {
+    color: rgba(255, 255, 255, 0.50);
+}
