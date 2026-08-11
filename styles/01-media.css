@@ -57,8 +57,8 @@
     border: 1px solid rgba(255, 255, 255, 0.24);
     border-radius: 18px;
     box-shadow: none;
-    max-width: 460px;
-    min-width: 460px;
+    max-width: 520px;
+    min-width: 520px;
 }
 
 .media-menu .thumbnail {
@@ -69,7 +69,7 @@
 .media-menu .title,
 .media-menu .artist,
 .media-menu .source {
-    font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei";
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "楷体", "Microsoft YaHei", sans-serif;
     margin-left: 14px;
 }
 
@@ -103,13 +103,13 @@
     border-radius: 20px;
     box-shadow: none;
     color: rgba(255, 255, 255, 0.86);
-    font-family: "Segoe Fluent Icons";
+    font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono", "ComicShannsMono Nerd Font";
     font-size: 15px;
     margin: 10px 2px 0 2px;
-    max-height: 40px;
-    max-width: 40px;
-    min-height: 40px;
-    min-width: 40px;
+    max-height: 42px;
+    max-width: 42px;
+    min-height: 42px;
+    min-width: 42px;
 }
 
 .media-menu .btn:hover {
@@ -147,7 +147,7 @@
 
 .media-menu .playback-time {
     color: rgba(255, 255, 255, 0.64);
-    font-family: "Segoe UI Variable", "Segoe UI";
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "Microsoft YaHei", sans-serif;
     font-size: 11px;
     margin-top: 16px;
     min-width: 76px;
@@ -234,7 +234,7 @@
     border: none;
     box-shadow: none;
     color: rgba(255, 255, 255, 0.86);
-    font-family: "Segoe Fluent Icons";
+    font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono", "ComicShannsMono Nerd Font";
     font-size: 16px;
     margin-top: 4px;
 }
