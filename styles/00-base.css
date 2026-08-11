@@ -1,0 +1,57 @@
+:root {
+    --rosewater: var(--yasb-accent-light3);
+    --flamingo: var(--yasb-accent-light2);
+    --pink: var(--yasb-accent-light1);
+    --mauve: var(--yasb-accent);
+    --red: #f38ba8;
+    --maroon: var(--yasb-accent-dark1);
+    --peach: #fab387;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --teal: var(--yasb-accent-light2);
+    --sky: var(--yasb-accent-light1);
+    --sapphire: var(--yasb-accent);
+    --blue: var(--yasb-accent);
+    --lavender: var(--yasb-accent-light2);
+    --text: var(--yasb-foreground);
+    --subtext1: var(--yasb-foreground);
+    --subtext0: var(--yasb-foreground);
+    --overlay2: var(--yasb-accent-light3);
+    --overlay1: var(--yasb-accent-light2);
+    --overlay0: var(--yasb-accent-light1);
+    --surface2: var(--yasb-accent-dark1);
+    --surface1: var(--yasb-accent-dark2);
+    --surface0: var(--yasb-accent-dark3);
+    --base: var(--yasb-background);
+    --mantle: rgba(var(--yasb-background-rgb), 0.35);
+    --crust: rgba(var(--yasb-background-rgb), 0.35);
+}
+*{
+	font-size: 12px;
+	color: var(--subtext0);
+	font-weight: 600;
+	font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "楷体", "Microsoft YaHei", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+.icon {
+    font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono", "ComicShannsMono Nerd Font";
+    font-weight: 600;
+    font-size: 16px;
+}
+.yasb-bar {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+.widget {
+	padding: 0 12px;
+	margin: 0;
+}
+.icon {
+	font-size: 16px;
+}
+.widget .label {
+	padding: 0px 2px; 
+}
+

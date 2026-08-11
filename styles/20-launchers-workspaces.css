@@ -1,0 +1,209 @@
+.apps-widget {
+	padding: 0 4px 0 2px;
+}
+.quick-launch-widget {
+    padding: 0 4px;
+}
+.quick-launch-widget .widget-container {
+    background-color: var(--crust);
+    margin: 4px 0;
+    border-radius: 12px;
+    padding: 0 8px;
+}
+.quick-launch-widget .icon {
+    color: var(--sky);
+    font-size: 14px;
+}
+.quick-launch-widget .icon:hover {
+    color: var(--text);
+}
+.quick-launch-popup .container {
+    background-color: rgba(var(--yasb-background-rgb), 0.24);
+    border: 1px solid rgba(var(--yasb-foreground-rgb), 0.20);
+    border-radius: 26px;
+}
+.quick-launch-popup .search {
+    background-color: rgba(var(--yasb-foreground-rgb), 0.14);
+    border: 1px solid rgba(var(--yasb-foreground-rgb), 0.22);
+    border-radius: 22px;
+    margin: 12px 14px 8px 14px;
+    padding: 14px 18px;
+}
+.quick-launch-popup .search .loader-line {
+    color: var(--yasb-accent);
+}
+.quick-launch-popup .search .search-icon,
+.quick-launch-popup .search .search-submit-icon {
+    color: rgba(var(--yasb-foreground-rgb), 0.72);
+    font-family: "Segoe Fluent Icons", "Segoe MDL2 Assets";
+    font-size: 18px;
+    min-width: 18px;
+    padding-right: 10px;
+}
+.quick-launch-popup .search .search-input {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 6px 0;
+    selection-background-color: var(--yasb-accent);
+}
+.quick-launch-popup .search .prefix {
+    background: rgba(var(--yasb-accent-rgb), 0.22);
+    border: 1px solid rgba(var(--yasb-accent-rgb), 0.48);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 6px;
+    padding: 1px 8px 2px 8px;
+}
+.quick-launch-popup .results {
+    background-color: rgba(var(--yasb-background-rgb), 0.22);
+    border: 1px solid rgba(var(--yasb-foreground-rgb), 0.16);
+    border-radius: 22px;
+    margin: 8px 14px 14px 14px;
+    padding: 10px;
+}
+.quick-launch-popup .results-list-view {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 15px;
+    font-weight: 650;
+    outline: none;
+}
+.quick-launch-popup .results-list-view .description {
+    color: rgba(var(--yasb-foreground-rgb), 0.62);
+    font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+.quick-launch-popup .results-list-view .separator {
+    color: rgba(var(--yasb-foreground-rgb), 0.54);
+    font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 0 4px 12px;
+}
+.quick-launch-popup .results-list-view::item {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    margin: 3px 0;
+    padding: 11px 14px;
+}
+.quick-launch-popup .results-list-view::item:hover,
+.quick-launch-popup .results-list-view::item:selected {
+    background-color: rgba(var(--yasb-foreground-rgb), 0.13);
+    border: 1px solid rgba(var(--yasb-accent-rgb), 0.50);
+}
+.quick-launch-popup .results-empty-text {
+    color: rgba(var(--yasb-foreground-rgb), 0.84);
+    font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 18px;
+}
+.quick-launch-popup .preview {
+    background-color: rgba(var(--yasb-accent-rgb), 0.07);
+    border-left: 1px solid rgba(var(--yasb-foreground-rgb), 0.12);
+}
+.quick-launch-popup .preview .preview-text,
+.quick-launch-popup .preview .preview-image {
+    background-color: rgba(var(--yasb-foreground-rgb), 0.04);
+    border: none;
+    color: rgba(var(--yasb-foreground-rgb), 0.88);
+    font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 13px;
+    padding: 8px 12px;
+}
+.quick-launch-popup .preview .preview-meta {
+    border-top: 1px solid rgba(var(--yasb-foreground-rgb), 0.12);
+    font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
+    padding: 8px 12px;
+}
+.quick-launch-popup .preview .preview-meta .preview-title {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 650;
+    margin-bottom: 8px;
+}
+.quick-launch-popup .preview .preview-meta .preview-subtitle {
+    color: rgba(var(--yasb-foreground-rgb), 0.68);
+    font-size: 12px;
+    font-weight: 500;
+}
+.komorebi-active-layout {
+	padding: 0 4px 0 0;
+}
+.komorebi-active-layout .label {
+	font-weight: 600;
+	padding: 2px 0 0 0;
+}
+.apps-widget .widget-container,
+.komorebi-workspaces .widget-container,
+.komorebi-active-layout .widget-container{
+	background-color: var(--crust);
+	margin: 4px 0 4px 0;
+	border-radius: 12px;
+    border: 0px solid var(--surface1);
+    padding: 0 8px;
+}
+.komorebi-workspaces .widget-container {
+    border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+    margin-left: 4px;
+}
+.komorebi-workspaces {
+	border-top-right-radius: 14px;
+	border-bottom-right-radius: 14px;
+	padding: 0 4px 0 0;
+}
+.komorebi-workspaces .offline-status {
+    color: var(--surface2);
+    font-size: 12px;
+    padding: 0 0 0 4px;
+    font-weight:600;
+}
+.komorebi-workspaces .ws-btn {
+    border: none;
+    background-color:transparent;
+	margin:0;
+    font-size: 12px;
+	color:  var(--overlay1);
+    height: 28px;
+    width: 18px;
+}
+.komorebi-workspaces .ws-btn:hover {
+    color: var(--subtext1);
+}
+.komorebi-workspaces .ws-btn.populated {
+    color:transparent;
+    width: 10px;
+    height: 10px;
+    background-color: var(--lavender);
+    border-radius: 5px;
+    margin: 0 4px;
+    font-size: 1px;
+}
+.komorebi-workspaces .ws-btn.active {
+	color: transparent;
+    background-color: var(--blue);
+    width: 36px;
+    height: 10px;
+    margin: 0 4px;
+    border-radius: 5px; 
+}
+.apps-widget .label {
+	font-size: 14px;
+	padding: 0 2px;
+    color: var(--subtext0);
+}
+.apps-widget .label:hover {
+	color: var(--text);
+}

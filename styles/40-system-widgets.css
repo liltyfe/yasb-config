@@ -1,0 +1,160 @@
+.traffic-widget,
+.cpu-widget,
+.memory-widget {
+    padding: 0 4px;
+}
+
+.traffic-widget .widget-container,
+.cpu-widget .widget-container,
+.memory-widget .widget-container {
+    background-color: var(--crust);
+    margin: 4px 0;
+    border-radius: 12px;
+    padding: 0 8px;
+}
+
+.traffic-widget .label,
+.cpu-widget .label,
+.memory-widget .label {
+    color: var(--subtext0);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.traffic-widget .icon,
+.cpu-widget .icon,
+.memory-widget .icon {
+    font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono";
+    font-size: 14px;
+    min-width: 16px;
+}
+
+.traffic-widget .widget-container {
+    min-width: 170px;
+    max-width: 170px;
+}
+
+.traffic-widget .label {
+    min-width: 148px;
+    max-width: 148px;
+}
+
+
+/* CPU/内存状态颜色 */
+.cpu-widget .label.status-low,
+.memory-widget .label.status-low {
+    color: var(--green);
+}
+
+.cpu-widget .label.status-medium,
+.memory-widget .label.status-medium {
+    color: var(--yellow);
+}
+
+.cpu-widget .label.status-high,
+.memory-widget .label.status-high,
+.cpu-widget .label.status-critical,
+.memory-widget .label.status-critical {
+    color: var(--red);
+}
+
+/* 弹出菜单 */
+.traffic-menu,
+.cpu-popup,
+.memory-popup {
+    background-color: rgba(17, 17, 27, 0.75);
+    border-radius: 12px;
+}
+
+.cpu-widget,
+.memory-widget {
+    padding: 0 6px;
+}
+
+.cpu-widget .widget-container,
+.memory-widget .widget-container {
+    padding: 0 10px;
+}
+
+.cpu-widget .icon,
+.memory-widget .icon {
+    min-width: 18px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.cpu-widget .label,
+.memory-widget .label {
+    padding: 0 4px;
+}
+
+/* ==============================
+   Bluetooth Widget
+============================== */
+
+.bluetooth-widget {
+    padding: 0 6px;
+}
+
+.bluetooth-widget .widget-container {
+    background-color: var(--crust);
+    margin: 4px 0;
+    border-radius: 12px;
+    padding: 0 10px;
+}
+
+.bluetooth-widget .label {
+    color: var(--subtext0);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 2px;
+}
+
+.bluetooth-widget .label span,
+.bluetooth-widget .icon {
+    margin-right: 6px;
+    font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono";
+    font-size: 14px;
+}
+
+/* 蓝牙图标微调 */
+.bluetooth-widget .label span {
+    position: relative;
+    top: -1px;
+}
+
+/* ==============================
+   Network / WiFi Widget
+============================== */
+
+.wifi-widget {
+    padding: 0 6px;
+}
+
+.wifi-widget .widget-container {
+    background-color: var(--crust);
+    margin: 4px 0;
+    border-radius: 12px;
+    padding: 0 10px;
+}
+
+.wifi-widget .label {
+    color: var(--subtext0);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 2px;
+}
+
+.wifi-widget .label span,
+.wifi-widget .icon {
+    margin-right: 6px;
+    font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono";
+    font-size: 14px;
+}
+
+/* 图标垂直微调 */
+.wifi-widget .label span {
+    position: relative;
+    top: -1px;
+}
+

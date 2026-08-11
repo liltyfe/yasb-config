@@ -1,0 +1,86 @@
+/* ==============================
+   Media Widget
+============================== */
+
+.media-widget {
+    padding: 0 6px;
+}
+
+.media-widget .widget-container {
+    background-color: var(--crust);
+    margin: 4px 0;
+    border-radius: 12px;
+    padding: 0 8px;
+    min-width: 260px;
+}
+
+.media-widget .label {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 8px;
+}
+
+.media-widget .btn {
+    background-color: transparent;
+    border: none;
+    color: var(--subtext0);
+    font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono";
+    font-size: 12px;
+    min-width: 20px;
+    padding: 0 4px;
+}
+
+.media-widget .btn:hover {
+    color: var(--text);
+}
+
+.media-widget .btn.play,
+.media-widget .btn.pause {
+    color: var(--blue);
+}
+
+.media-widget .progress-bar {
+    background-color: var(--surface0);
+    border-radius: 2px;
+    max-height: 2px;
+    min-height: 2px;
+}
+
+.media-widget .progress-bar::chunk {
+    background-color: var(--blue);
+    border-radius: 2px;
+}
+
+.media-menu {
+    background-color: rgba(17, 17, 27, 0.75);
+    border-radius: 12px;
+}
+
+.media-menu .title,
+.media-menu .artist,
+.media-menu .source {
+    font-family: "Segoe UI";
+    color: var(--text);
+}
+
+.media-menu .artist,
+.media-menu .source {
+    color: var(--subtext0);
+}
+
+.media-menu .btn {
+    color: var(--subtext0);
+    background-color: transparent;
+    border: none;
+}
+
+.media-menu .btn:hover {
+    color: var(--text);
+}
+
+.media-menu .btn.play,
+.media-menu .btn.pause {
+    color: var(--blue);
+}
+

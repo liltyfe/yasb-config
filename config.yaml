@@ -9,7 +9,7 @@ komorebi:
 bars:
   primary-bar:
     enabled: true
-    screens: ["*"]
+    screens: ["primary"]
     class_name: "yasb-bar"
     alignment:
       position: "top"
@@ -32,7 +32,7 @@ bars:
     widgets:
       left: ["media", "active_window"]
       center: ["clock","quick_launch","apps"]
-      right: ["wallpapers", "github", "window_switcher", "taskbar", "traffic", "wifi", "cpu", "memory", "bluetooth", "dnd", "whkd", "volume", "power_menu"]
+      right: ["wallpapers", "github", "window_switcher", "taskbar", "traffic", "wifi", "cpu", "memory", "bluetooth", "dnd", "whkd", "volume", "control_center", "power_menu"]
 widgets:
   dnd:
     type: "yasb.dnd.DndWidget"
@@ -267,6 +267,89 @@ widgets:
         - "\uf028"
       callbacks:
         on_right: "exec cmd.exe /c start ms-settings:sound"
+  control_center:
+    type: "yasb.control_center.ControlCenterWidget"
+    options:
+      label: "<span>\ue713</span>"
+      tooltip: true
+      sections_order:
+        - "system_controls"
+        - "quick_actions"
+        - "sliders"
+        - "power"
+        - "media"
+      popup:
+        blur: true
+        alignment: "right"
+        direction: "down"
+        border_color: "none"
+        round_corners: true
+        round_corners_type: "normal"
+        offset_top: 6
+        offset_left: 0
+      sections:
+        system_controls:
+          show: true
+          profile_image_size: 28
+          power_icon: "\ue7e8"
+          lock_icon: "\ue72e"
+          settings_icon: "\ue713"
+        quick_actions:
+          show: true
+          columns: 3
+          label_position: "default"
+          actions:
+            - id: "toggle_dnd"
+              label: "Do Not Disturb"
+              icon: "\uf285"
+            - id: "toggle_mute"
+              label: "Mute"
+              icon: "\ue74f"
+            - id: "toggle_mic_mute"
+              label: "Mic Mute"
+              icon: "\uf12e"
+            - id: "screenshot"
+              label: "Screenshot"
+              icon: "\ue91b"
+            - id: "touch_keyboard"
+              label: "Keyboard"
+              icon: "\ue765"
+            - id: "toggle_theme"
+              label: "Dark Mode"
+              icon: "\ue708"
+        sliders:
+          show: true
+          brightness:
+            show_slider: true
+            icon: "\ue706"
+            show_source_selector: true
+            source_selector_icon: "\ue972"
+          volume:
+            show_slider: true
+            icon: "\ue767"
+            show_source_selector: true
+            source_selector_icon: "\ue972"
+          microphone:
+            show_slider: true
+            icon: "\ue720"
+            show_source_selector: true
+            source_selector_icon: "\ue972"
+        power:
+          show: true
+          power_plan_title: "Power Plan"
+          power_mode_title: "Power Mode"
+          button_menu_icon: "\ue76c"
+        media:
+          show: true
+          thumbnail_size: 36
+          thumbnail_radius: 6
+          icons:
+            prev_track: "\ue622"
+            next_track: "\ue623"
+            play: "\uf5b0"
+            pause: "\ue62e"
+      callbacks:
+        on_left: "toggle_menu"
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
     options:

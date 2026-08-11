@@ -1,0 +1,63 @@
+/* ==============================
+   Do Not Disturb / Window Switcher
+============================== */
+
+.dnd-widget,
+.window-switcher-widget {
+    padding: 0 6px;
+}
+
+.dnd-widget .widget-container,
+.window-switcher-widget .widget-container {
+    background-color: var(--crust);
+    margin: 4px 0;
+    border-radius: 12px;
+    padding: 0 8px;
+}
+
+.dnd-widget .label,
+.window-switcher-widget .label {
+    color: var(--yasb-foreground);
+    font-size: 14px;
+}
+
+.dnd-widget .icon.status-priority,
+.dnd-widget .icon.status-alarms,
+.dnd-widget .label.status-priority,
+.dnd-widget .label.status-alarms,
+.window-switcher-widget .icon {
+    color: var(--yasb-accent);
+}
+
+.window-switcher-popup {
+    background-color: rgba(var(--yasb-background-rgb), 0.38);
+    border: 1px solid rgba(var(--yasb-foreground-rgb), 0.20);
+    border-radius: 18px;
+    padding: 12px;
+}
+
+.window-switcher-popup .item {
+    background-color: rgba(var(--yasb-foreground-rgb), 0.035);
+    border: 1px solid rgba(var(--yasb-foreground-rgb), 0.08);
+    border-radius: 14px;
+    margin: 6px;
+    padding: 12px;
+}
+
+.window-switcher-popup .item:hover,
+.window-switcher-popup .item.active {
+    background-color: rgba(var(--yasb-accent-rgb), 0.24);
+    border: 1px solid rgba(var(--yasb-accent-rgb), 0.72);
+}
+
+.window-switcher-popup .title {
+    color: var(--yasb-foreground);
+    background-color: rgba(var(--yasb-foreground-rgb), 0.035);
+    border-top: 1px solid rgba(var(--yasb-foreground-rgb), 0.14);
+    border-radius: 8px;
+    padding: 10px 12px 6px 12px;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
