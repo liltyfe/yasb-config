@@ -27,10 +27,9 @@
 
 .control-center-menu {
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: none;
     border-radius: 20px;
     box-shadow: none;
-    /* box-shadow: 0 12px 36px rgba(0, 0, 0, 0.38); */
     min-width: 360px;
 }
 
@@ -275,26 +274,71 @@
     background-color: rgba(var(--yasb-foreground-rgb), 0.10);
 }
 
-.control-center-menu .context-menu {
-    background-color: rgba(var(--yasb-background-rgb), 0.72);
-    border: 1px solid rgba(var(--yasb-foreground-rgb), 0.22);
+/* Secondary and nested menus share the same acrylic surface.
+   Keep shadows disabled: Qt can leave a dark rectangle after hover. */
+.control-center-menu .context-menu,
+.control-center-menu .context-menu .submenu,
+.control-center-menu .context-menu .menu-checkbox {
+    background-color: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.28);
     border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.30);
-    color: var(--text);
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.96);
     font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei";
     font-size: 12px;
     padding: 4px 0;
 }
 
-.control-center-menu .context-menu::item {
+.control-center-menu .context-menu::item,
+.control-center-menu .context-menu .menu-checkbox {
     background-color: transparent;
+    border: none;
     border-radius: 5px;
+    box-shadow: none;
     margin: 2px 6px;
     min-width: 100px;
     padding: 6px 12px;
 }
 
-.control-center-menu .context-menu::item:selected {
-    background-color: rgba(var(--yasb-accent-rgb), 0.22);
-    color: var(--text);
+.control-center-menu .context-menu::item:selected,
+.control-center-menu .context-menu .menu-checkbox:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    border: none;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.control-center-menu .context-menu::separator {
+    background-color: rgba(255, 255, 255, 0.18);
+    height: 1px;
+    margin: 4px 8px;
+}
+
+.control-center-menu .context-menu::indicator:unchecked {
+    background-color: transparent;
+    color: transparent;
+    height: 12px;
+    margin-left: 0;
+    width: 4px;
+}
+
+.control-center-menu .context-menu::indicator:checked {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 2px;
+    height: 12px;
+    margin-left: 0;
+    width: 4px;
+}
+
+.control-center-menu .context-menu::right-arrow {
+    background-color: transparent;
+    height: 8px;
+    padding-right: 18px;
+    width: 8px;
+}
+
+.control-center-menu .context-menu::item:disabled,
+.control-center-menu .context-menu .submenu::item:disabled {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.46);
 }
