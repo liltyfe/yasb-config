@@ -562,19 +562,45 @@ widgets:
     type: "yasb.bluetooth.BluetoothWidget"
     options:
       label: "<span>{icon}</span> {device_count}"
-      label_alt: "{device_name}"
-      label_no_device: "No device"
+      label_alt: "<span>{icon}</span> {device_name}"
+      label_no_device: "未连接设备"
       label_device_separator: ", "
-      max_length: 18
+      max_length: 24
       max_length_ellipsis: "..."
       tooltip: true
       icons:
         bluetooth_on: "\udb80\udcaf"
         bluetooth_off: "\udb80\udcb2"
         bluetooth_connected: "\udb80\udcb1"
+      device_aliases: []
       callbacks:
-        on_left: "toggle_label"
-        on_right: "exec cmd.exe /c start ms-settings:bluetooth"
+        on_left: "toggle_menu"
+        on_middle: "exec cmd.exe /c start ms-settings:bluetooth"
+        on_right: "toggle_label"
+      menu_config:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "none"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        labels:
+          title: "蓝牙"
+          your_devices: "我的设备"
+          new_devices: "附近的新设备"
+          not_connected: "未连接"
+          connected: "已连接"
+          more_settings: "更多蓝牙设置"
+          connect: "连接"
+          disconnect: "断开连接"
+          connecting: "正在连接"
+          disconnecting: "正在断开"
+          pair: "配对"
+          manage: "管理"
+          power_on: "已开启"
+          power_off: "已关闭"
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
