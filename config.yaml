@@ -32,7 +32,7 @@ bars:
     widgets:
       left: ["media", "active_window"]
       center: ["clock","quick_launch","apps"]
-      right: ["wallpapers", "github", "window_switcher", "taskbar", "traffic", "wifi", "cpu", "memory", "bluetooth", "whkd", "volume", "control_center", "power_menu"]
+      right: ["wallpapers", "github", "window_switcher", "taskbar", "traffic", "wifi", "cpu", "memory", "bluetooth", "whkd", "volume", "todo", "control_center", "power_menu"]
 widgets:
   dnd:
     type: "yasb.dnd.DndWidget"
@@ -49,6 +49,45 @@ widgets:
         disabled: "\uf0f3"
         priority: "\uf186"
         alarms: "\uf1f6"
+  todo:
+    type: "yasb.todo.TodoWidget"
+    options:
+      label: "\uf0ae {count}"
+      label_alt: "\uf0ae {count}/{completed}"
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "none"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+      icons:
+        add: "\uf067 新建任务"
+        edit: "编辑"
+        delete: "删除"
+        date: "\uf073"
+        category: "\uf02b"
+        checked: "\uf14a"
+        unchecked: "\uf0c8"
+        sort: "\uf0dc"
+        no_tasks: "\uf4a0"
+      categories:
+        default:
+          label: "常规"
+        soon:
+          label: "尽快完成"
+        today:
+          label: "今日"
+        urgent:
+          label: "紧急"
+        important:
+          label: "重要"
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
   window_switcher:
     type: "yasb.window_switcher.WindowSwitcherWidget"
     options:

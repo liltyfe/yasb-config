@@ -1,0 +1,335 @@
+/* ==============================
+   Todo Widget
+============================== */
+
+.todo-widget {
+    padding: 0 6px;
+}
+
+.todo-widget .widget-container {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    box-shadow: none;
+    margin: 4px 0;
+    padding: 0 7px;
+}
+
+.todo-widget .label,
+.todo-widget .icon {
+    color: rgba(255, 255, 255, 0.90);
+    font-family: "ComicShannsMono Nerd Font", "JetBrainsMono NFP", "Symbols Nerd Font Mono" ;
+    font-size: 13px;
+    padding: 0;
+}
+
+.todo-widget .widget-container:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+    box-shadow: none;
+}
+
+/* Pure white acrylic surface. */
+.todo-menu {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    max-height: 500px;
+    max-width: 420px;
+    min-height: 500px;
+    min-width: 420px;
+}
+
+.todo-menu .header {
+    background-color: transparent;
+    margin: 14px 12px 12px 12px;
+}
+
+.todo-menu .header .add-task-button,
+.todo-menu .header .tab-buttons {
+    background-color: transparent;
+    border: none;
+    border-radius: 11px;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.88);
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "楷体", "Microsoft YaHei", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    padding: 5px 9px;
+}
+
+.todo-menu .header .add-task-button {
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+.todo-menu .header .add-task-button:hover,
+.todo-menu .header .tab-buttons:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    box-shadow: none;
+}
+
+.todo-menu .header .tab-buttons.in-progress:checked,
+.todo-menu .header .tab-buttons.completed:checked {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 1);
+}
+
+.todo-menu .header .tab-buttons.sort {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono";
+    max-height: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    min-width: 24px;
+    padding: 0;
+}
+
+.todo-menu .header .tab-buttons.sort:pressed {
+    background-color: rgba(255, 255, 255, 0.22);
+    box-shadow: none;
+}
+
+.todo-menu .no-tasks {
+    color: rgba(255, 255, 255, 0.62);
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "Microsoft YaHei", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 14px;
+}
+
+.todo-menu .no-tasks-icon {
+    color: rgba(255, 255, 255, 0.46);
+    font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono";
+    font-size: 72px;
+    font-weight: 400;
+    margin-top: 60px;
+}
+
+.todo-menu .task-item {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+    box-shadow: none;
+    margin: 0 12px 8px 12px;
+    padding: 8px 0;
+}
+
+.todo-menu .task-item:hover,
+.todo-menu .task-item.expanded {
+    background-color: rgba(255, 255, 255, 0.13);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: none;
+}
+
+.todo-menu .task-item.drop-highlight,
+.todo-menu .task-item.drop-highlight:hover,
+.todo-menu .task-item.drop-highlight:focus {
+    background-color: rgba(255, 255, 255, 0.20);
+    border-color: rgba(255, 255, 255, 0.40);
+    box-shadow: none;
+}
+
+.todo-menu .task-item .title,
+.todo-menu .task-item .description {
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "楷体", "Microsoft YaHei", sans-serif;
+    padding: 0 8px 7px 8px;
+}
+
+.todo-menu .task-item .title {
+    color: rgba(255, 255, 255, 0.94);
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.todo-menu .task-item .description {
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.todo-menu .task-item.completed .title,
+.todo-menu .task-item.completed .description {
+    color: rgba(255, 255, 255, 0.40);
+    text-decoration: line-through;
+}
+
+.todo-menu .task-checkbox {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.84);
+    font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono";
+    font-size: 17px;
+    margin-left: 11px;
+    margin-top: 4px;
+}
+
+.todo-menu .task-checkbox:checked {
+    color: rgba(255, 255, 255, 0.46);
+}
+
+.todo-menu .task-info-row {
+    margin-bottom: 7px;
+    margin-left: 8px;
+}
+
+.todo-menu .task-info-row .date-text,
+.todo-menu .task-info-row .category-text {
+    color: rgba(255, 255, 255, 0.56);
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "Microsoft YaHei", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.todo-menu .task-info-row .date-icon,
+.todo-menu .task-info-row .category-icon {
+    color: rgba(255, 255, 255, 0.66);
+    font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono";
+    font-size: 12px;
+}
+
+.todo-menu .task-info-row .category-text.important,
+.todo-menu .task-info-row .category-icon.important {
+    color: rgba(255, 180, 185, 0.94);
+}
+
+.todo-menu .task-info-row .category-text.urgent,
+.todo-menu .task-info-row .category-icon.urgent {
+    color: rgba(255, 135, 135, 0.96);
+}
+
+.todo-menu .task-info-row .category-text.soon,
+.todo-menu .task-info-row .category-icon.soon {
+    color: rgba(170, 235, 220, 0.94);
+}
+
+.todo-menu .task-info-row .category-text.today,
+.todo-menu .task-info-row .category-icon.today {
+    color: rgba(255, 225, 170, 0.94);
+}
+
+.todo-menu .task-info-row .edit-task-button,
+.todo-menu .task-info-row .delete-task-button {
+    background-color: rgba(255, 255, 255, 0.12);
+    border: none;
+    border-radius: 9px;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.84);
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "Microsoft YaHei", sans-serif;
+    font-size: 11px;
+    margin-right: 7px;
+    max-height: 22px;
+    min-height: 22px;
+    padding: 0 8px;
+}
+
+.todo-menu .task-info-row .edit-task-button:hover,
+.todo-menu .task-info-row .delete-task-button:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+    box-shadow: none;
+}
+
+.todo-menu .app-dialog {
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 14px;
+    box-shadow: none;
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "Microsoft YaHei", sans-serif;
+}
+
+.todo-menu .app-dialog .title-field,
+.todo-menu .app-dialog .desc-field {
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 6px;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.94);
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "Microsoft YaHei", sans-serif;
+    font-size: 12px;
+    margin: 8px 0 4px 0;
+    min-height: 30px;
+    padding: 0 7px;
+}
+
+.todo-menu .app-dialog .desc-field {
+    max-height: 64px;
+}
+
+.todo-menu .app-dialog .title-field:focus,
+.todo-menu .app-dialog .desc-field:focus {
+    background-color: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.40);
+    box-shadow: none;
+}
+
+.todo-menu .app-dialog .buttons-container {
+    background-color: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    margin-top: 12px;
+    min-height: 68px;
+    padding: 0 16px;
+}
+
+.todo-menu .app-dialog .button,
+.todo-menu .app-dialog .category-button {
+    background-color: rgba(255, 255, 255, 0.12);
+    border: none;
+    border-radius: 7px;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.84);
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "Microsoft YaHei", sans-serif;
+    font-size: 11px;
+    min-height: 26px;
+    padding: 0 7px;
+}
+
+.todo-menu .app-dialog .button:hover,
+.todo-menu .app-dialog .category-button:hover,
+.todo-menu .app-dialog .category-button:checked {
+    background-color: rgba(255, 255, 255, 0.22);
+    box-shadow: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.todo-menu .app-dialog .button.add {
+    background-color: rgba(255, 255, 255, 0.88);
+    color: rgba(20, 20, 24, 0.92);
+}
+
+.todo-menu .app-dialog .warning-message {
+    background-color: rgba(255, 170, 170, 0.12);
+    border: 1px solid rgba(255, 190, 190, 0.24);
+    border-radius: 6px;
+    color: rgba(255, 220, 220, 0.90);
+    font-size: 11px;
+    padding: 7px 10px;
+}
+
+.todo-menu .context-menu,
+.todo-menu .context-menu .menu-checkbox {
+    background-color: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 10px;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.94);
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "Microsoft YaHei", sans-serif;
+    padding: 4px 0;
+}
+
+.todo-menu .context-menu::item {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    margin: 2px 6px;
+    padding: 6px 12px;
+}
+
+.todo-menu .context-menu::item:selected {
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: none;
+}
