@@ -53,90 +53,90 @@
 }
 
 .media-menu {
-    background-color: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    border-radius: 18px;
-    box-shadow: none;
-    max-width: 520px;
-    min-width: 520px;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    max-width: 390px;
+    min-width: 390px;
 }
 
 .media-menu .thumbnail {
-    border: 1px solid rgba(255, 255, 255, 0.20);
-    box-shadow: none;
+    border: 1px solid rgba(var(--yasb-foreground-rgb), 0.16);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .media-menu .title,
 .media-menu .artist,
 .media-menu .source {
     font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "楷体", "Microsoft YaHei", sans-serif;
-    margin-left: 14px;
+    margin-left: 40px;
 }
 
 .media-menu .title {
-    color: rgba(255, 255, 255, 0.98);
-    font-size: 15px;
+    color: var(--yasb-foreground);
+    font-size: 16px;
     font-weight: 600;
 }
 
 .media-menu .artist {
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 12px;
+    color: rgba(var(--yasb-foreground-rgb), 0.70);
+    font-size: 13px;
     font-weight: 600;
-    margin-top: 4px;
+    margin-top: 14px;
 }
 
 .media-menu .source {
-    background-color: rgba(255, 255, 255, 0.14);
+    background-color: rgba(var(--yasb-accent-rgb), 0.20);
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     box-shadow: none;
-    color: rgba(255, 255, 255, 0.88);
+    color: var(--yasb-foreground);
     font-size: 10px;
-    margin-top: 10px;
-    padding: 2px 6px;
+    margin-top: 12px;
+    padding: 3px 7px;
 }
 
 .media-menu .btn {
     background-color: transparent;
     border: none;
-    border-radius: 20px;
+    border-radius: 17px;
     box-shadow: none;
-    color: rgba(255, 255, 255, 0.86);
+    color: var(--yasb-foreground);
     font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono", "ComicShannsMono Nerd Font";
     font-size: 15px;
-    margin: 10px 2px 0 2px;
-    max-height: 42px;
-    max-width: 42px;
-    min-height: 42px;
-    min-width: 42px;
+    margin: 12px 3px 0 3px;
+    max-height: 38px;
+    max-width: 38px;
+    min-height: 38px;
+    min-width: 38px;
 }
 
 .media-menu .btn:hover {
-    background-color: rgba(255, 255, 255, 0.14);
+    background-color: rgba(var(--yasb-foreground-rgb), 0.12);
     border: none;
     box-shadow: none;
-    color: rgba(255, 255, 255, 1);
+    color: var(--yasb-foreground);
 }
 
 .media-menu .btn:clicked,
 .media-menu .btn:pressed {
-    background-color: rgba(255, 255, 255, 0.20);
+    background-color: rgba(var(--yasb-foreground-rgb), 0.20);
     box-shadow: none;
     opacity: 0.72;
 }
 
 .media-menu .btn.play {
-    background-color: rgba(255, 255, 255, 0.92);
-    color: rgba(20, 20, 24, 0.94);
-    font-size: 20px;
+    background-color: transparent;
+    color: var(--yasb-foreground);
+    font-size: 18px;
 }
 
 .media-menu .btn.disabled,
 .media-menu .btn.disabled:hover {
     background-color: transparent;
     box-shadow: none;
-    color: rgba(255, 255, 255, 0.34);
+    color: rgba(var(--yasb-foreground-rgb), 0.34);
     opacity: 1;
 }
 
@@ -146,10 +146,10 @@
 }
 
 .media-menu .playback-time {
-    color: rgba(255, 255, 255, 0.64);
+    color: rgba(var(--yasb-foreground-rgb), 0.62);
     font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "Microsoft YaHei", sans-serif;
     font-size: 11px;
-    margin-top: 16px;
+    margin-top: 12px;
     min-width: 76px;
 }
 
@@ -162,25 +162,25 @@
 }
 
 .media-menu .progress-slider::groove {
-    background-color: rgba(255, 255, 255, 0.18);
+    background-color: rgba(var(--yasb-foreground-rgb), 0.18);
     border: none;
     border-radius: 3px;
-    height: 3px;
+    height: 2px;
 }
 
 .media-menu .progress-slider::groove:hover {
-    background-color: rgba(255, 255, 255, 0.26);
-    height: 5px;
+    background-color: rgba(var(--yasb-foreground-rgb), 0.26);
+    height: 4px;
 }
 
 .media-menu .progress-slider::sub-page {
-    background-color: rgba(255, 255, 255, 0.94);
+    background-color: var(--yasb-accent);
     border: none;
     border-radius: 3px;
 }
 
 .media-menu .progress-slider::handle {
-    background-color: rgba(255, 255, 255, 0.96);
+    background-color: var(--yasb-accent);
     border: none;
     border-radius: 5px;
     height: 10px;
@@ -189,43 +189,45 @@
 }
 
 .media-menu .app-volume-container {
-    background-color: rgba(255, 255, 255, 0.10);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 16px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
     box-shadow: none;
-    margin-left: 12px;
-    padding: 8px 6px;
+    margin-left: 4px;
+    padding: 0;
 }
 
 .media-menu .app-volume-container .volume-slider {
     background-color: transparent;
     border: none;
+    max-height: 150px;
+    min-height: 150px;
 }
 
 .media-menu .app-volume-container .volume-slider::groove {
-    background-color: rgba(255, 255, 255, 0.18);
+    background-color: rgba(var(--yasb-foreground-rgb), 0.18);
     border: none;
     border-radius: 3px;
     width: 3px;
 }
 
 .media-menu .app-volume-container .volume-slider::sub-page {
-    background-color: rgba(255, 255, 255, 0.22);
+    background-color: rgba(var(--yasb-foreground-rgb), 0.18);
     border-radius: 3px;
 }
 
 .media-menu .app-volume-container .volume-slider::add-page {
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: var(--yasb-accent);
     border-radius: 3px;
 }
 
 .media-menu .app-volume-container .volume-slider::handle {
-    background-color: rgba(255, 255, 255, 0.96);
+    background-color: var(--yasb-accent);
     border: none;
-    border-radius: 5px;
-    height: 10px;
-    margin: 0 -4px;
-    width: 10px;
+    border-radius: 7px;
+    height: 14px;
+    margin: 0 -6px;
+    width: 14px;
 }
 
 .media-menu .app-volume-container .mute-button,
@@ -233,12 +235,12 @@
     background-color: transparent;
     border: none;
     box-shadow: none;
-    color: rgba(255, 255, 255, 0.86);
+    color: var(--yasb-foreground);
     font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono", "ComicShannsMono Nerd Font";
     font-size: 16px;
     margin-top: 4px;
 }
 
 .media-menu .app-volume-container .unmute-button {
-    color: rgba(255, 255, 255, 0.50);
+    color: rgba(var(--yasb-foreground-rgb), 0.50);
 }
