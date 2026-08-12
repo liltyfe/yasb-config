@@ -32,7 +32,7 @@ bars:
     widgets:
       left: ["media", "active_window"]
       center: ["clock","quick_launch","apps"]
-      right: ["wallpapers", "github", "window_switcher", "taskbar", "traffic", "wifi", "cpu", "memory", "bluetooth", "dnd", "whkd", "volume", "control_center", "power_menu"]
+      right: ["wallpapers", "github", "window_switcher", "taskbar", "traffic", "wifi", "cpu", "memory", "bluetooth", "whkd", "volume", "control_center", "power_menu"]
 widgets:
   dnd:
     type: "yasb.dnd.DndWidget"
