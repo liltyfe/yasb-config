@@ -5,17 +5,17 @@
 /* Keep the compact bar appearance from the existing theme. */
 .bluetooth-widget .icon.bt-off,
 .bluetooth-widget .label.bt-off {
-    color: rgba(255, 255, 255, 0.46);
+    color: var(--yasb-foreground);
 }
 
 .bluetooth-widget .icon.bt-on,
 .bluetooth-widget .label.bt-on {
-    color: var(--subtext0);
+    color: var(--yasb-foreground);
 }
 
 .bluetooth-widget .icon.bt-connected,
 .bluetooth-widget .label.bt-connected {
-    color: var(--yasb-accent);
+    color: var(--yasb-foreground);
 }
 
 /* The popup itself is transparent acrylic with a light-only mask.

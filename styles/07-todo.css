@@ -17,7 +17,7 @@
 
 .todo-widget .label,
 .todo-widget .icon {
-    color: rgba(255, 255, 255, 0.90);
+    color: var(--yasb-foreground);
     font-family: "ComicShannsMono Nerd Font", "JetBrainsMono NFP", "Symbols Nerd Font Mono" ;
     font-size: 13px;
     padding: 0;

@@ -7,15 +7,23 @@
 }
 
 .control-center-widget .widget-container {
-    background-color: var(--crust);
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
     margin: 4px 0;
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 0 9px;
+}
+
+.control-center-widget .widget-container:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 0;
+    box-shadow: none;
 }
 
 .control-center-widget .label,
 .control-center-widget .icon {
-    color: var(--yasb-accent);
+    color: var(--yasb-foreground);
     font-family: "Segoe Fluent Icons";
     font-size: 15px;
 }
