@@ -1,0 +1,226 @@
+/* ==============================
+   Quick Launch / Wallpapers
+   Unified acrylic popup surfaces
+============================== */
+
+/* The DWM blur is the only bottom layer. Keep both popup roots transparent. */
+.quick-launch-popup,
+.quick-launch-popup .container,
+.wallpapers-gallery-window {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+.quick-launch-popup .container {
+    border-radius: 24px;
+}
+
+.wallpapers-gallery-window {
+    border-radius: 24px;
+    margin: 0;
+    padding: 8px;
+}
+
+/* Shared theme typography */
+.quick-launch-popup .search .search-input,
+.quick-launch-popup .search .prefix,
+.quick-launch-popup .results-list-view,
+.quick-launch-popup .results-list-view .description,
+.quick-launch-popup .results-list-view .separator,
+.quick-launch-popup .results-empty-text,
+.quick-launch-popup .preview .preview-text,
+.quick-launch-popup .preview .preview-meta,
+.quick-launch-popup .preview .preview-title,
+.quick-launch-popup .preview .preview-subtitle,
+.quick-launch-popup .preview.edit .preview-title,
+.quick-launch-popup .preview.edit .preview-line-edit,
+.quick-launch-popup .preview.edit .preview-text-edit,
+.quick-launch-popup .preview.edit .preview-btn,
+.wallpapers-gallery-buttons {
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "楷体", "Microsoft YaHei", sans-serif;
+}
+
+/* ==============================
+   Quick Launch / Alt+Space
+============================== */
+
+.quick-launch-popup .search {
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 18px;
+    box-shadow: none;
+    margin: 12px 14px 8px 14px;
+}
+
+.quick-launch-popup .search:hover,
+.quick-launch-popup .search:focus-within {
+    background-color: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: none;
+}
+
+.quick-launch-popup .search .search-icon,
+.quick-launch-popup .search .search-submit-icon {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.quick-launch-popup .search .search-input {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    color: var(--text);
+    font-size: 16px;
+}
+
+.quick-launch-popup .search .prefix {
+    background-color: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 8px;
+    box-shadow: none;
+    color: var(--text);
+}
+
+.quick-launch-popup .results {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    margin: 8px 14px 14px 14px;
+    padding: 8px;
+}
+
+.quick-launch-popup .results-list-view {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    color: var(--text);
+}
+
+.quick-launch-popup .results-list-view .description,
+.quick-launch-popup .results-list-view .separator {
+    color: rgba(255, 255, 255, 0.66);
+}
+
+.quick-launch-popup .results-list-view::item {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    box-shadow: none;
+    margin: 3px 0;
+}
+
+.quick-launch-popup .results-list-view::item:hover,
+.quick-launch-popup .results-list-view::item:selected {
+    background-color: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: none;
+}
+
+.quick-launch-popup .results-empty-text {
+    color: rgba(255, 255, 255, 0.84);
+}
+
+.quick-launch-popup .preview {
+    background-color: transparent;
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: none;
+}
+
+.quick-launch-popup .preview .preview-text,
+.quick-launch-popup .preview .preview-image {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 0;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.quick-launch-popup .preview .preview-meta {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.quick-launch-popup .preview .preview-title {
+    color: var(--text);
+}
+
+.quick-launch-popup .preview .preview-subtitle {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.quick-launch-popup .preview.edit .preview-line-edit,
+.quick-launch-popup .preview.edit .preview-text-edit {
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    box-shadow: none;
+    color: var(--text);
+}
+
+.quick-launch-popup .preview.edit .preview-line-edit:focus,
+.quick-launch-popup .preview.edit .preview-text-edit:focus {
+    background-color: rgba(255, 255, 255, 0.11);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: none;
+}
+
+.quick-launch-popup .preview.edit .preview-btn {
+    background-color: rgba(255, 255, 255, 0.11);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.quick-launch-popup .preview.edit .preview-btn:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: none;
+}
+
+.quick-launch-popup .preview.edit .preview-btn.save {
+    background-color: rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: var(--text);
+}
+
+/* ==============================
+   Wallpapers / Alt+P
+============================== */
+
+.wallpapers-gallery-buttons {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 11px;
+    box-shadow: none;
+    color: var(--text);
+}
+
+.wallpapers-gallery-buttons:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    box-shadow: none;
+}
+
+.wallpapers-gallery-buttons:pressed {
+    background-color: rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    box-shadow: none;
+}
+
+.wallpapers-gallery-image {
+    background-color: transparent;
+    border: 3px solid transparent;
+    border-radius: 18px;
+    box-shadow: none;
+}
+
+.wallpapers-gallery-image:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 3px solid rgba(255, 255, 255, 0.62);
+    box-shadow: none;
+}
+
+.wallpapers-gallery-image.focused {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 3px solid rgba(255, 255, 255, 0.88);
+    box-shadow: none;
+}

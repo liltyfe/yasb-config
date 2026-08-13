@@ -1,0 +1,55 @@
+/* ==============================
+   Window Switcher / Alt+W
+   Unified acrylic popup surface
+============================== */
+
+/* DWM blur remains the only bottom layer. */
+.window-switcher-popup {
+    background-color: transparent;
+    border: 0;
+    border-radius: 22px;
+    box-shadow: none;
+    padding: 12px;
+}
+
+.window-switcher-popup .item {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    box-shadow: none;
+    margin: 6px;
+    padding: 12px;
+}
+
+.window-switcher-popup .item:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: none;
+}
+
+.window-switcher-popup .item.active {
+    background-color: rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    box-shadow: none;
+}
+
+.window-switcher-popup .title {
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+    box-shadow: none;
+    color: var(--text);
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "楷体", "Microsoft YaHei", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 12px;
+    padding: 10px 12px 6px 12px;
+}
+
+.window-switcher-popup .item .icon,
+.window-switcher-popup .item .app-icon {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+}
