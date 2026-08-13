@@ -1,0 +1,154 @@
+/* ==============================
+   Calendar / Clock popup
+   Unified acrylic surface and fonts
+============================== */
+
+/* DWM blur remains the only bottom layer. */
+.clock-popup.calendar,
+.clock-popup.calendar .calendar-layout,
+.clock-popup.calendar .calendar-table {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+.clock-popup.calendar {
+    border-radius: 22px;
+    min-width: 460px;
+    padding: 10px;
+}
+
+.clock-popup.calendar .calendar-layout {
+    border-radius: 18px;
+}
+
+/* ComicShannsMono handles Latin text; Chinese glyphs fall back to LXGW. */
+.clock-popup.calendar,
+.clock-popup.calendar .calendar-table,
+.clock-popup.calendar .calendar-table::item,
+.clock-popup.calendar .day-label,
+.clock-popup.calendar .year-label,
+.clock-popup.calendar .month-label,
+.clock-popup.calendar .date-label,
+.clock-popup.calendar .week-label,
+.clock-popup.calendar .holiday-label,
+.clock-popup.calendar .upcoming-events-header,
+.clock-popup.calendar .upcoming-events-item {
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "楷体", "Microsoft YaHei", sans-serif;
+}
+
+.clock-popup.calendar .calendar-table,
+.clock-popup.calendar .calendar-table::item {
+    background-color: transparent;
+    border: 0;
+    color: rgba(255, 255, 255, 0.70);
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+.clock-popup.calendar .calendar-table::item:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 0;
+    color: var(--text);
+}
+
+.clock-popup.calendar .calendar-table::item:selected {
+    background-color: rgba(255, 255, 255, 0.24);
+    border: 0;
+    border-radius: 10px;
+    color: var(--text);
+    font-weight: 700;
+}
+
+.clock-popup.calendar .day-label,
+.clock-popup.calendar .year-label,
+.clock-popup.calendar .month-label,
+.clock-popup.calendar .date-label {
+    color: var(--text);
+    min-width: 180px;
+    max-width: 180px;
+}
+
+.clock-popup.calendar .day-label {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.clock-popup.calendar .year-label,
+.clock-popup.calendar .month-label {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.clock-popup.calendar .date-label {
+    color: rgba(255, 255, 255, 0.96);
+    font-size: 88px;
+    font-weight: 900;
+    margin-top: -12px;
+}
+
+.clock-popup.calendar .week-label,
+.clock-popup.calendar .holiday-label {
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.clock-popup.calendar .holiday-label {
+    color: rgba(255, 255, 255, 0.78);
+    font-weight: 700;
+}
+
+.clock-popup.calendar .extended-container {
+    background-color: transparent;
+    border: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: none;
+    padding-left: 16px;
+}
+
+.clock-popup.calendar .extended-container .upcoming-events-header {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 12px;
+    font-weight: 700;
+    margin: 4px 0 8px 0;
+}
+
+.clock-popup.calendar .extended-container .upcoming-events-item {
+    background-color: transparent;
+    border: 0;
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 0;
+}
+
+.clock-popup.calendar .extended-container .upcoming-events-item:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 0;
+    color: var(--text);
+}
+
+.clock-popup.calendar .button {
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    box-shadow: none;
+    color: var(--text);
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "楷体", "Microsoft YaHei", sans-serif;
+}
+
+.clock-popup.calendar .button:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: none;
+}
+
+.clock-popup.calendar .button:pressed,
+.clock-popup.calendar .button:checked {
+    background-color: rgba(255, 255, 255, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    box-shadow: none;
+}

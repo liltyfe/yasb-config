@@ -202,8 +202,14 @@ widgets:
       label_alt: "{%A, %d %B %Y %H:%M:%S}"
       timezones: []
       calendar: 
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "none"
         alignment: "center"
+        direction: "down"
         offset_top: 6
+        offset_left: 0
   quick_launch:
     type: "yasb.quick_launch.QuickLaunchWidget"
     options:
