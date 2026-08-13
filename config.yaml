@@ -516,8 +516,8 @@ widgets:
         medium: 50
         high: 90
       callbacks:
-        on_left: "toggle_label"
-        on_right: "toggle_menu"
+        on_left: "toggle_menu"
+        on_right: "toggle_label"
       menu:
         enabled: true
         blur: true
@@ -543,8 +543,8 @@ widgets:
         medium: 50
         high: 90
       callbacks:
-        on_left: "toggle_label"
-        on_right: "toggle_menu"
+        on_left: "toggle_menu"
+        on_right: "toggle_label"
       menu:
         enabled: true
         blur: true
