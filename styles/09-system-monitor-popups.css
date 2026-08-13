@@ -1,0 +1,294 @@
+/* ==============================
+   Traffic / CPU / RAM popups
+   YASB 2.0.6 acrylic surfaces
+============================== */
+
+/* The DWM blur supplied by each widget remains the only bottom surface. */
+.traffic-menu,
+.cpu-popup,
+.memory-popup {
+    background-color: transparent;
+    border: 0;
+    border-radius: 18px;
+    box-shadow: none;
+}
+
+.traffic-menu {
+    min-width: 330px;
+}
+
+.cpu-popup,
+.memory-popup {
+    min-width: 420px;
+}
+
+/* Shared typography */
+.traffic-menu .header .title,
+.traffic-menu .section-title,
+.traffic-menu .data-text,
+.traffic-menu .data-value,
+.traffic-menu .interface-info,
+.traffic-menu .internet-info,
+.cpu-popup .header .text,
+.cpu-popup .graph-title,
+.cpu-popup .stats .stat-label,
+.cpu-popup .stats .stat-value,
+.memory-popup .header .text,
+.memory-popup .graph-title,
+.memory-popup .stats .stat-label,
+.memory-popup .stats .stat-value {
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "楷体", "Microsoft YaHei", sans-serif;
+}
+
+/* ==============================
+   Traffic popup
+============================== */
+
+.traffic-menu .header {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 12px 14px;
+}
+
+.traffic-menu .header .title {
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 2px 4px;
+}
+
+.traffic-menu .header .reset-button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    box-shadow: none;
+    color: var(--subtext0);
+    font-size: 11px;
+    padding: 5px 9px;
+}
+
+.traffic-menu .header .reset-button:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: none;
+    color: var(--text);
+}
+
+.traffic-menu .header .reset-button:pressed {
+    background-color: rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: none;
+}
+
+.traffic-menu .section,
+.traffic-menu .section.speeds-section,
+.traffic-menu .section.session-section,
+.traffic-menu .section.today-section,
+.traffic-menu .section.alltime-section {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    margin: 0 12px;
+    padding: 10px 6px;
+}
+
+.traffic-menu .section.alltime-section {
+    border-bottom: 0;
+}
+
+.traffic-menu .section-title {
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.traffic-menu .download-speed,
+.traffic-menu .upload-speed {
+    background-color: transparent;
+    border: 0;
+    margin: 6px 10px 4px 10px;
+    padding: 8px 10px;
+}
+
+.traffic-menu .speed-separator {
+    background-color: rgba(255, 255, 255, 0.18);
+    margin: 18px 0 10px 0;
+    max-width: 1px;
+}
+
+.traffic-menu .upload-speed-value,
+.traffic-menu .download-speed-value {
+    color: var(--text);
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "Microsoft YaHei", sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.traffic-menu .upload-speed-unit,
+.traffic-menu .download-speed-unit {
+    color: rgba(255, 255, 255, 0.72);
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "Microsoft YaHei", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    padding-top: 3px;
+}
+
+.traffic-menu .upload-speed-placeholder,
+.traffic-menu .download-speed-placeholder {
+    color: rgba(255, 255, 255, 0.52);
+    font-family: "ComicShannsMono Nerd Font", "LXGW WenKai Mono", "Microsoft YaHei", sans-serif;
+    font-size: 10px;
+    padding-bottom: 3px;
+}
+
+.traffic-menu .data-text {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 12px;
+    padding: 3px 0;
+}
+
+.traffic-menu .data-value {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 0;
+}
+
+.traffic-menu .interface-info,
+.traffic-menu .internet-info {
+    background-color: transparent;
+    border: 0;
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 11px;
+    padding: 8px 14px;
+}
+
+.traffic-menu .internet-info.checking {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.traffic-menu .internet-info.connected {
+    background-color: rgba(255, 255, 255, 0.10);
+    color: #a6e3a1;
+}
+
+.traffic-menu .internet-info.disconnected {
+    background-color: rgba(255, 255, 255, 0.10);
+    color: #f38ba8;
+}
+
+/* ==============================
+   CPU / RAM popups
+============================== */
+
+.cpu-popup .header,
+.memory-popup .header {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 12px 16px;
+}
+
+.cpu-popup .header .text,
+.memory-popup .header .text {
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cpu-popup .header .pin-btn,
+.memory-popup .header .pin-btn {
+    background-color: transparent;
+    border: 0;
+    border-radius: 9px;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.64);
+    font-family: "Segoe Fluent Icons";
+    font-size: 14px;
+    padding: 6px;
+}
+
+.cpu-popup .header .pin-btn:hover,
+.memory-popup .header .pin-btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+    color: var(--text);
+}
+
+.cpu-popup .header .pin-btn:pressed,
+.memory-popup .header .pin-btn:pressed,
+.cpu-popup .header .pin-btn.pinned,
+.memory-popup .header .pin-btn.pinned {
+    background-color: rgba(255, 255, 255, 0.20);
+    box-shadow: none;
+    color: var(--text);
+}
+
+.cpu-popup .graph-container,
+.memory-popup .graph-container {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    min-height: 86px;
+    padding: 12px 14px 10px 14px;
+}
+
+.cpu-popup .cpu-graph,
+.memory-popup .memory-graph {
+    background-color: transparent;
+    color: var(--yasb-accent);
+}
+
+.cpu-popup .cpu-graph-grid,
+.memory-popup .memory-graph-grid {
+    color: rgba(255, 255, 255, 0.10);
+}
+
+.cpu-popup .graph-title,
+.memory-popup .graph-title {
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 0 0 5px 2px;
+}
+
+.cpu-popup .stats,
+.memory-popup .stats {
+    background-color: transparent;
+    border: 0;
+    padding: 10px;
+}
+
+.cpu-popup .stats .stat-item,
+.memory-popup .stats .stat-item {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 11px;
+    box-shadow: none;
+    margin: 5px;
+    padding: 8px 11px;
+}
+
+.cpu-popup .stats .stat-item:hover,
+.memory-popup .stats .stat-item:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+}
+
+.cpu-popup .stats .stat-label,
+.memory-popup .stats .stat-label {
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 3px 1px 3px;
+}
+
+.cpu-popup .stats .stat-value,
+.memory-popup .stats .stat-value {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1px 3px 8px 3px;
+}
