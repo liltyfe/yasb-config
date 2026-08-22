@@ -6,6 +6,8 @@
 
 > 当前配置默认只在主显示器显示。YASB 的程序版本建议使用 2.0.6；Control Center 等组件在较旧版本中不可用。
 
+演示视频（及安装教程）：<https://www.bilibili.com/video/BV1vCb26hEun/?vd_source=958633e12684eb6031a43772ebfbd213#reply310765040497>
+
 ## 效果预览
 
 ### 整体桌面
