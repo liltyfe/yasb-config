@@ -30,7 +30,7 @@ bars:
       bottom: 0
       right: 6
     widgets:
-      left: ["media", "active_window"]
+      left: ["media", "audio_visualizer", "active_window"]
       center: ["clock","quick_launch","apps"]
       right: ["wallpapers", "window_switcher", "taskbar", "traffic", "wifi", "cpu", "memory", "bluetooth", "todo", "control_center", "power_menu"]
 widgets:
@@ -195,6 +195,25 @@ widgets:
         next_track: "\uf051"
         mute: "\uf6a9"
         unmute: "\uf028"
+  audio_visualizer:
+    type: "yasb.audio_visualizer.AudioVisualizerWidget"
+    options:
+      style: "waves"
+      height: 20
+      smoothness: 70
+      sensitivity: 50
+      auto_gain: true
+      framerate: 60
+      freq_min: 50
+      freq_max: 12000
+      hide_idle: true
+      hide_idle_after: 2000
+      channels: "stereo"
+      reverse: false
+      mirror: false
+      edge_fade: 0
+      waves:
+        width: 120
   clock:
     type: "yasb.clock.ClockWidget"
     options:
