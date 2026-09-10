@@ -5,7 +5,8 @@
     padding: 0 4px;
 }
 .quick-launch-widget .widget-container {
-    background-color: var(--crust);
+    /* Let the shared bar surface show through the launcher. */
+    background-color: transparent;
     margin: 4px 0;
     border-radius: 12px;
     padding: 0 8px;
@@ -148,7 +149,8 @@
 .apps-widget .widget-container,
 .komorebi-workspaces .widget-container,
 .komorebi-active-layout .widget-container{
-	background-color: var(--crust);
+    /* Remove the standalone capsule fill while preserving layout spacing. */
+    background-color: transparent;
 	margin: 4px 0 4px 0;
 	border-radius: 12px;
     border: 0px solid var(--surface1);

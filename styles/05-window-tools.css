@@ -9,7 +9,8 @@
 
 .dnd-widget .widget-container,
 .window-switcher-widget .widget-container {
-    background-color: var(--crust);
+    /* Transparent launcher surface; popup styling remains independent. */
+    background-color: transparent;
     margin: 4px 0;
     border-radius: 12px;
     padding: 0 8px;
@@ -60,4 +61,3 @@
     font-size: 12px;
     font-weight: 600;
 }
-

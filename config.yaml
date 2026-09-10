@@ -11,12 +11,14 @@ bars:
     enabled: true
     screens: ["primary"]
     class_name: "yasb-bar"
+    style: "adaptive"
+    style_adaptive_exclude: ["media"]
     alignment:
       position: "top"
     blur_effect:
-      enabled: true
+      enabled: false
       dark_mode: true
-      round_corners: true
+      round_corners: false
       border_color: "none"
     window_flags:
       always_on_top: false
@@ -25,10 +27,10 @@ bars:
       width: "100%"
       height: 32
     padding:
-      top: 4
-      left: 6
+      top: 0
+      left: 0
       bottom: 0
-      right: 6
+      right: 0
     widgets:
       left: ["media", "audio_visualizer", "active_window"]
       center: ["clock","quick_launch","apps"]
@@ -437,13 +439,13 @@ widgets:
       label: "{data}"
       app_list:
         - { icon: "\uf489", launch: "wt" }
-        - { icon: "\uf001", launch: 'QQMusic.exe' }
-        - { icon: "\udb82\ude1e", launch: 'Code.exe' }
-        - { icon: "\udb80\ude39", launch: 'firefox.exe'}
+        - { icon: "\uf001", launch: 'C:\Users\az_ha\Tools\QQMusic\QQMusic.exe' }
+        - { icon: "\udb82\ude1e", launch: 'C:\Users\az_ha\Tools\MICROS~1\Code.exe' }
+        - { icon: "\udb80\ude39", launch: 'C:\Program Files\Firefox Nightly\firefox.exe'}
         - { icon: "\uf07b", launch: 'explorer' }
-        - { icon: "\uf1d6", launch: 'QQ.exe' }
-        - { icon: "\uf1d7", launch: 'Weixin.exe'}
-        - { icon: "\udb81\udd0a", launch: 'CLASHN~1.EXE' }
+        - { icon: "\uf1d6", launch: 'C:\PROGRA~1\Tencent\QQNT\QQ.exe' }
+        - { icon: "\uf1d7", launch: 'C:\PROGRA~1\Tencent\Weixin\Weixin.exe'}
+        - { icon: "\udb81\udd0a", launch: 'C:\PROGRA~1\CLASHN~1\CLASHN~1.EXE' }
   github:
     type: "yasb.github.GithubWidget"
     options:
@@ -480,7 +482,7 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\udb83\ude09</span>"
-      image_path: 'wallpapers'
+      image_path: 'C:\Users\az_ha\wallpapers'
       change_automatically: false
       update_interval: 60
       engine:

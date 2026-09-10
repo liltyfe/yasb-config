@@ -44,6 +44,34 @@
     margin: 0;
     background-color: transparent;
 }
+
+/* ==============================
+   Adaptive Bar Surface
+   System light/dark background with content-following islands.
+   The media widget is excluded in config.yaml to retain its cover artwork.
+============================== */
+.yasb-bar.adaptive {
+    /* Keep a 25% system-theme tint on the painted islands and rail.
+       Native bar blur is disabled in config.yaml so gaps show the desktop
+       directly, without a rectangular blur backdrop. */
+    background-color: rgba(var(--yasb-background-rgb), 0.25);
+    border: none;
+    border-radius: 0;
+
+    /* Island geometry: 32px bar height permits a radius up to 14px. */
+    -qproperty-islands: true;
+    -qproperty-railheight: 4;
+    -qproperty-islandradius: 12;
+    -qproperty-grouppadding: 8;
+
+    /* Keep the window at the configured bar height without edge extensions. */
+    -qproperty-edgeradius: 0;
+
+    /* Keep the native contour border disabled explicitly for hot reloads. */
+    -qproperty-borderwidth: 0;
+    -qproperty-bordercolor: transparent;
+}
+
 .widget {
 	padding: 0 12px;
 	margin: 0;
@@ -54,4 +82,3 @@
 .widget .label {
 	padding: 0px 2px; 
 }
-
