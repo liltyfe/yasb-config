@@ -7,9 +7,13 @@
 }
 
 .media-widget .widget-container {
-    background-color: var(--crust);
-    margin: 4px 0;
-    border-radius: 12px;
+    /* Share the Adaptive Bar surface without a separate capsule.
+       Thumbnail opacity and edge fade remain controlled by config.yaml. */
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    border-radius: 0;
     padding: 0 8px;
     min-width: 260px;
 }
@@ -24,7 +28,7 @@
 .media-widget .btn {
     background-color: transparent;
     border: none;
-    color: var(--subtext0);
+    color: var(--yasb-foreground);
     font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono";
     font-size: 12px;
     min-width: 20px;
@@ -32,12 +36,8 @@
 }
 
 .media-widget .btn:hover {
-    color: var(--text);
-}
-
-.media-widget .btn.play,
-.media-widget .btn.pause {
-    color: var(--blue);
+    /* Accent feedback only on hover; all idle controls follow the OS theme. */
+    color: var(--yasb-accent);
 }
 
 .media-widget .progress-bar {

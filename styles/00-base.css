@@ -48,7 +48,7 @@
 /* ==============================
    Adaptive Bar Surface
    System light/dark background with content-following islands.
-   The media widget is excluded in config.yaml to retain its cover artwork.
+   Media shares the left island while retaining its thumbnail artwork.
 ============================== */
 .yasb-bar.adaptive {
     /* Keep a 25% system-theme tint on the painted islands and rail.
