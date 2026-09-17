@@ -1,85 +1,65 @@
-# YASB 2.0.6 亚克力桌面状态栏配置
+# YASB 2.0.7 亚克力桌面状态栏配置
 
-一套面向 Windows 11 与 [YASB Reborn](https://yasb.dev/) 2.0.6 的个人状态栏配置。
+一套面向 Windows 11 与 [YASB Reborn](https://yasb.dev/) 2.0.7 的个人状态栏配置。
 
-主题以 Windows 动态强调色为基础，使用半透明白色蒙版、DWM 模糊和圆角构建轻量亚克力界面。配置包含重新设计的媒体播放器、Control Center、Todo、Quick Launch、窗口切换器、壁纸画廊、任务栏、硬件状态和电源菜单。
+主题以 Windows 动态强调色为基础，使用 Adaptive Bar 岛屿、半透明系统底色蒙版、DWM 模糊和圆角构建轻量亚克力界面。配置包含重新设计的媒体播放器、立体声音频可视化、Control Center、Todo、Quick Launch、窗口切换器、壁纸画廊、任务栏、硬件状态和电源菜单。
 
-> 当前配置默认只在主显示器显示。YASB 的程序版本建议使用 2.0.6；Control Center 等组件在较旧版本中不可用。
+> 当前配置默认在所有未单独分配的显示器上显示。YASB 的程序版本建议使用 2.0.7；Adaptive Bar、音频可视化等组件在较旧版本中不可用。
 
 演示视频（及安装教程）：<https://www.bilibili.com/video/BV1vCb26hEun/?vd_source=958633e12684eb6031a43772ebfbd213#reply310765040497>
 
 ## 效果预览
 
-### 整体桌面
-
-![深色桌面整体效果](img/效果图-深色-整体桌面.png)
-
-![浅色桌面整体效果](img/效果图-浅色-整个桌面.png)
-
-### 状态栏
-
-![深色模式状态栏](img/效果图-深色模式.png)
-
-![浅色模式状态栏](img/效果图-浅色模式.png)
+![YASB 2.0.7 桌面效果](img/2.0.7overview/2.0.7版本效果图.png)
 
 ### Control Center
 
 Control Center 集成勿扰、系统静音、麦克风静音、截图、触摸键盘、深浅模式、亮度、音量、麦克风、电源计划和媒体控制。主面板及二、三级菜单统一为无阴影亚克力风格。
 
-![Control Center](img/control-center-preview.png)
+### 媒体播放器与音频可视化
 
-### 媒体播放器
-
-状态栏继续使用经典 `MediaWidget`，保留专辑封面、标题滚动、内嵌播放控制和进度条；右键弹出的播放器经过重新布局，使用更大的封面、圆形控制键、播放进度和应用音量滑杆。
-
-![媒体播放器](img/media-preview.png)
+状态栏继续使用经典 `MediaWidget`，保留专辑封面、标题滚动、内嵌播放控制和进度条；右侧紧邻立体声波形可视化。右键弹出的播放器经过重新布局，使用更大的封面、圆形控制键、播放进度和应用音量滑杆。
 
 ### Todo
 
 Todo 支持新增、编辑、分类、完成、删除和排序任务。任务类别包括常规、尽快完成、今日、紧急和重要。
 
-![Todo 面板](img/todo-preview.png)
-
 ### Quick Launch 与窗口切换
 
 按 `Alt + Space` 打开 Quick Launch，搜索应用、文件、系统设置和最近项目。
 
-![Quick Launch](img/效果图-搜索功能.png)
-
 按 `Alt + W` 打开窗口切换器。
-
-![窗口视图切换](img/app视图切换效果.png)
 
 ### 电源菜单与任务栏菜单
 
-![电源菜单](img/power-menu.png)
-
-![任务栏应用右键菜单](img/taskbar-context-menu.png)
+点击最右侧电源图标可打开关机、重启、退出登录、休眠和睡眠菜单。任务栏应用支持右键菜单。
 
 ## 功能亮点
 
+- **Adaptive Bar**：`style: "adaptive"` 让状态栏沿内容绘制岛屿，岛屿之间露出桌面壁纸。
 - **系统动态配色**：`system_colors: true` 会读取 Windows 强调色、背景色和前景色。
 - **白色亚克力蒙版**：弹窗主要使用固定的白色 `rgba()` 调整透明度，避免主题变量造成过深黑色遮罩。
 - **无残留阴影**：交互面板使用 `box-shadow: none`，避免 Qt 在悬停或点击后留下黑色矩形。
+- **音频可视化**：原生 WASAPI 立体声波形，空闲约 2 秒后自动收起。
 - **Control Center**：在一个面板中集中管理常用系统开关、滑杆、电源和媒体。
 - **经典媒体栏 + 新弹窗样式**：保留旧媒体组件的状态栏控制方式，同时重新设计播放器弹窗。
 - **Todo 任务管理**：直接从状态栏新增、分类和完成任务。
 - **Quick Launch**：支持应用、文件和设置搜索，可通过全局快捷键呼出。
 - **窗口切换器**：以图标视图快速查找并切换窗口。
-- **壁纸画廊**：中央大图预览、键盘和滚轮翻页，并使用圆形扩散过渡。
+- **壁纸画廊**：横向大图预览、键盘和滚轮翻页，并使用圆形扩散过渡。
 - **模块化样式**：主样式按功能拆分，便于独立调整和维护。
 
 ## 状态栏布局
 
-当前状态栏高度为 32px，并只显示在主显示器：
+当前状态栏高度为 32px，使用 Adaptive Bar，并在所有未单独分配的显示器上显示：
 
 | 区域 | 组件 |
 | --- | --- |
-| 左侧 | 媒体播放器、活动窗口标题 |
+| 左侧 | 媒体播放器、音频可视化、活动窗口标题 |
 | 中间 | 日期时间、Quick Launch、常用应用启动器 |
-| 右侧 | 壁纸、GitHub、窗口切换器、任务栏、网速、Wi-Fi、CPU、内存、蓝牙、WHKD、音量、Todo、Control Center、电源菜单 |
+| 右侧 | 壁纸、窗口切换器、任务栏、网速、Wi-Fi、CPU、内存、蓝牙、Todo、Control Center、电源菜单 |
 
-独立的 DND 组件配置仍保留在 `config.yaml`，但没有直接加载到状态栏；勿扰功能可通过 Control Center 使用。
+独立的 DND、音量、GitHub 和 WHKD 组件配置仍保留在 `config.yaml`，但没有直接加载到状态栏；勿扰和音量可通过 Control Center 使用。
 
 ## 快捷键
 
@@ -93,6 +73,14 @@ Todo 支持新增、编辑、分类、完成、删除和排序任务。任务类
 
 ## 常用操作
 
+### Adaptive Bar
+
+当前栏使用 `style: "adaptive"`，原生模糊已关闭，因此岛屿之间会直接露出桌面。
+
+- 左、中、右三组组件各自形成岛屿，外缘保留 4px 轨道。
+- 媒体播放器与音频可视化共用左侧岛屿，不再额外绘制胶囊底色。
+- 岛屿形状由 `styles/00-base.css` 中的 `-qproperty-*` 控制，保存后会随样式热重载。
+
 ### 媒体
 
 - 左键点击媒体栏：播放或暂停。
@@ -102,6 +90,13 @@ Todo 支持新增、编辑、分类、完成、删除和排序任务。任务类
 
 部分播放器或浏览器不会向 Windows 媒体 API 提供可靠的时间轴或应用音频会话；此时进度拖动或音量控制可能不可用。
 
+### 音频可视化
+
+- 使用原生 WASAPI loopback，跟随 Windows 当前默认播放设备。
+- 当前样式为立体声 `waves`，宽度 120px，强调色纵向渐变。
+- `hide_idle: true`：无音频约 2 秒后自动收起，播放恢复时重新出现。
+- 仅捕获经过 Windows 共享混音器的声音；ASIO 等直通输出不会显示波形。
+
 ### Todo
 
 - 左键点击 Todo：打开任务面板。
@@ -109,7 +104,7 @@ Todo 支持新增、编辑、分类、完成、删除和排序任务。任务类
 - 支持常规、尽快完成、今日、紧急和重要五种分类。
 - YASB 会在配置目录生成 `todo.json` 保存任务。
 
-Todo 主面板支持原生模糊。新增/编辑任务窗口在 YASB 2.0.6 中由普通 Qt `QDialog` 实现，没有调用 DWM backdrop，因此只能通过 CSS 获得玻璃拟态，无法仅靠主题实现真正的背景模糊。
+Todo 主面板支持原生模糊。新增/编辑任务窗口在 YASB 2.0.7 中由普通 Qt `QDialog` 实现，没有调用 DWM backdrop，因此只能通过 CSS 获得玻璃拟态，无法仅靠主题实现真正的背景模糊。
 
 ### Control Center
 
@@ -119,6 +114,10 @@ Todo 主面板支持原生模糊。新增/编辑任务窗口在 YASB 2.0.6 中�
 - 电源区域可切换 Power Plan 与 Power Mode。
 - 子菜单使用白色透明底板且禁用阴影，以避免鼠标交互后残留黑框。
 
+### 日期时间
+
+左键点击时钟打开日历弹窗。日历面板使用与其他弹窗一致的亚克力底板。
+
 ### 窗口切换器
 
 点击窗口切换图标或按 `Alt + W` 打开。弹窗跟随鼠标所在屏幕，支持键盘选择、切换和关闭窗口。
@@ -127,9 +126,11 @@ Todo 主面板支持原生模糊。新增/编辑任务窗口在 YASB 2.0.6 中�
 
 - 点击壁纸图标或按 `Alt + P` 打开。
 - 每页显示一张 640px 宽的横向预览。
-- 使用方向键或滚轮切换，按 `Enter` 应用。
+- 使用方向键或滚轮切换，按 `Enter` 或双击应用。
+- 右键可选择应用到单个显示器或全部显示器。
 - 壁纸应用时使用 `circle` 圆形扩散动画。
 - 默认壁纸目录为 YASB 配置目录下的 `wallpapers/`。
+- 过渡动画依赖 Windows「设置 → 辅助功能 → 视觉效果 → 动画效果」；关闭后壁纸会立即切换。
 
 ### 实时网速
 
@@ -145,7 +146,7 @@ Todo 主面板支持原生模糊。新增/编辑任务窗口在 YASB 2.0.6 中�
 
 ### YASB
 
-安装 YASB Reborn 2.0.6：
+安装 YASB Reborn 2.0.7：
 
 ```powershell
 winget install --id AmN.yasb
@@ -156,6 +157,8 @@ winget install --id AmN.yasb
 ```powershell
 yasbc -v
 ```
+
+若已安装旧版本，请先升级到 2.0.7 再加载本配置。
 
 ### 字体
 
@@ -171,6 +174,8 @@ yasbc -v
 ### Windows 设置
 
 建议在“设置 → 个性化 → 颜色”中开启“透明效果”。系统关闭透明效果、省电模式或远程桌面环境可能让亚克力退化为普通半透明背景。
+
+壁纸过渡动画还需要开启“设置 → 辅助功能 → 视觉效果 → 动画效果”。
 
 如果启用 Komorebi、WHKD、天气、GitHub 或自定义应用启动项，还需要安装对应程序并配置必要的环境变量。
 
@@ -239,12 +244,18 @@ styles/
 ├─ 04-system-widgets.css
 ├─ 05-window-tools.css
 ├─ 06-control-center.css
-└─ 07-todo.css
+├─ 07-todo.css
+├─ 08-bluetooth.css
+├─ 09-system-monitor-popups.css
+├─ 10-launcher-wallpaper-popups.css
+├─ 11-window-switcher-popup.css
+├─ 12-calendar-popup.css
+└─ 13-audio-visualizer.css
 ```
 
 | 文件 | 内容 |
 | --- | --- |
-| `00-base.css` | 全局字体、动态颜色映射、状态栏基础样式 |
+| `00-base.css` | 全局字体、动态颜色映射、Adaptive Bar 岛屿几何 |
 | `01-media.css` | 媒体栏、播放器弹窗、时间轴和应用音量 |
 | `02-launchers-workspaces.css` | Quick Launch、应用启动器及工作区相关样式 |
 | `03-menus-and-utilities.css` | 通用菜单、任务栏菜单、壁纸及工具弹窗 |
@@ -252,8 +263,14 @@ styles/
 | `05-window-tools.css` | 活动窗口和窗口切换器 |
 | `06-control-center.css` | Control Center 主面板与子菜单 |
 | `07-todo.css` | Todo 主面板、任务项、新增/编辑窗口和上下文菜单 |
+| `08-bluetooth.css` | 蓝牙栏图标与设备菜单 |
+| `09-system-monitor-popups.css` | 网速、CPU、内存弹窗 |
+| `10-launcher-wallpaper-popups.css` | Quick Launch 与壁纸相关弹窗 |
+| `11-window-switcher-popup.css` | 窗口切换器弹窗 |
+| `12-calendar-popup.css` | 时钟日历弹窗 |
+| `13-audio-visualizer.css` | 音频可视化画布与强调色渐变 |
 
-> 若 Todo 能运行但仍显示默认样式，请确认 `styles.css` 末尾包含 `@import "styles/07-todo.css";`。
+> 若 Todo 能运行但仍显示默认样式，请确认 `styles.css` 末尾包含 `@import "styles/07-todo.css";`。音频可视化同理，需导入 `styles/13-audio-visualizer.css`。
 
 ## 本地路径与应用启动项
 
@@ -269,16 +286,16 @@ image_path: "wallpapers"
 
 ## 多显示器
 
-当前配置只在主显示器显示：
-
-```yaml
-screens: ["primary"]
-```
-
-希望在所有未分配显示器显示时，可改为：
+当前配置会在所有未单独分配的显示器上显示：
 
 ```yaml
 screens: ["*"]
+```
+
+若只希望显示在主显示器，可改为：
+
+```yaml
+screens: ["primary"]
 ```
 
 Quick Launch 固定在主屏打开；窗口切换器和壁纸画廊跟随鼠标所在屏幕。可在对应 `keybindings` 下调整 `screen`。
@@ -286,10 +303,13 @@ Quick Launch 固定在主屏打开；窗口切换器和壁纸画廊跟随鼠标�
 ## 自定义建议
 
 - 调整组件顺序：编辑 `bars.primary-bar.widgets` 下的 `left`、`center`、`right`。
+- 调整 Adaptive Bar 岛屿：修改 `styles/00-base.css` 中 `.yasb-bar.adaptive` 的 `-qproperty-railheight`、`-qproperty-islandradius`、`-qproperty-grouppadding`。
+- 关闭岛屿、改回整条实心栏：将 `-qproperty-islands` 设为 `false`。
 - 调整亚克力透明度：修改各模块中的 `rgba(255, 255, 255, alpha)`。
 - 避免 Qt 黑框：弹窗根容器和交互控件保持 `box-shadow: none`。
 - 调整字体：修改 `styles/00-base.css` 的全局字体栈。
 - 调整媒体弹窗：编辑 `styles/01-media.css` 和 `widgets.media.options.media_menu`。
+- 调整音频可视化：编辑 `styles/13-audio-visualizer.css` 和 `widgets.audio_visualizer.options`。
 - 调整 Todo：编辑 `styles/07-todo.css` 和 `widgets.todo.options.categories`。
 - 调整 Control Center：编辑 `styles/06-control-center.css` 和 `widgets.control_center.options.sections`。
 
@@ -297,18 +317,21 @@ Quick Launch 固定在主屏打开；窗口切换器和壁纸画廊跟随鼠标�
 
 ## 已知限制
 
-- Control Center、Todo 与其他新组件要求兼容的 YASB 版本，推荐 2.0.6。
-- Todo 新增/编辑窗口是普通 Qt `QDialog`，2.0.6 中无法仅通过 CSS 获得真正的 DWM 亚克力。
+- Adaptive Bar、音频可视化与壁纸过渡引擎要求 YASB 2.0.7。
+- Todo 新增/编辑窗口是普通 Qt `QDialog`，无法仅通过 CSS 获得真正的 DWM 亚克力。
+- 音频可视化只捕获 Windows 共享混音器中的声音，ASIO 等直通输出不会显示。
 - 媒体时间轴和应用音量依赖播放器向 Windows 媒体 API 提供数据。
+- 壁纸过渡动画依赖系统动画效果；4K 及以上大图偶尔可能出现闪一下旧壁纸。
 - 不同壁纸亮度会影响白色透明蒙版的文字可读性，可按需提高 alpha。
 - YASB 使用 Qt 样式系统，并非浏览器 CSS；部分 CSS3 属性和复杂布局不受支持。
 
 ## 参考与致谢
 
-本主题参考了 [amnweb/yasb-themes](https://github.com/amnweb/yasb-themes) 中的 Acrylic 与 Yasb 004，并在此基础上进行了模块拆分、动态强调色适配和弹窗重设计。
+本主题参考了 [amnweb/yasb-themes](https://github.com/amnweb/yasb-themes) 中的 Acrylic 与 Yasb 004，并在此基础上进行了模块拆分、动态强调色适配、Adaptive Bar 和弹窗重设计。
 
 - [YASB 官方文档](https://docs.yasb.dev/latest/)
 - [样式与系统颜色](https://docs.yasb.dev/latest/styling)
+- [Audio Visualizer](https://docs.yasb.dev/latest/widgets/audio-visualizer)
 - [Control Center](https://docs.yasb.dev/latest/widgets/control-center)
 - [Media](https://docs.yasb.dev/latest/widgets/media)
 - [Todo](https://docs.yasb.dev/latest/widgets/todo)

@@ -9,7 +9,7 @@ komorebi:
 bars:
   primary-bar:
     enabled: true
-    screens: ["primary"]
+    screens: ["*"]
     class_name: "yasb-bar"
     style: "adaptive"
     style_adaptive_exclude: []
@@ -493,20 +493,8 @@ widgets:
           action: "toggle_gallery"
           screen: "cursor"
       gallery:
-        enabled: true
-        blur: true
         image_width: 640
-        image_per_page: 1
-        gallery_columns: 1
-        horizontal_position: "center"
-        vertical_position: "center"
-        position_offset: 32
-        respect_work_area: true
-        show_buttons: false
         orientation: "landscape"
-        image_spacing: 16
-        lazy_load: true
-        lazy_load_fadein: 220
         image_corner_radius: 18
   traffic:
     type: "yasb.traffic.TrafficWidget"
