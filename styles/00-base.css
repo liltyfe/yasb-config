@@ -69,9 +69,9 @@
     /* Keep the window at the configured bar height without edge extensions. */
     -qproperty-edgeradius: 0;
 
-    /* Brighter hairline so the island contour reads as glass. */
-    -qproperty-borderwidth: 1;
-    -qproperty-bordercolor: rgba(255, 255, 255, 0.55);
+    /* Contour stroke off: the adaptive inner border breaks at concave fillets. */
+    -qproperty-borderwidth: 0;
+    -qproperty-bordercolor: transparent;
 }
 
 .widget {
