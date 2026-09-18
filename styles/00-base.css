@@ -51,10 +51,12 @@
    Media shares the left island while retaining its thumbnail artwork.
 ============================== */
 .yasb-bar.adaptive {
-    /* Keep a 25% system-theme tint on the painted islands and rail.
-       Native bar blur is disabled in config.yaml so gaps show the desktop
-       directly, without a rectangular blur backdrop. */
-    background-color: rgba(var(--yasb-background-rgb), 0.25);
+    /* Dark glass pane: brighter top sheen, denser tint, stronger rim.
+       Native bar blur stays off so gaps show the desktop directly. */
+    background-color: linear-gradient(
+        rgba(255, 255, 255, 0.28),
+        rgba(var(--yasb-background-rgb), 0.42)
+    );
     border: none;
     border-radius: 0;
 
@@ -67,9 +69,9 @@
     /* Keep the window at the configured bar height without edge extensions. */
     -qproperty-edgeradius: 0;
 
-    /* Keep the native contour border disabled explicitly for hot reloads. */
-    -qproperty-borderwidth: 0;
-    -qproperty-bordercolor: transparent;
+    /* Brighter hairline so the island contour reads as glass. */
+    -qproperty-borderwidth: 1;
+    -qproperty-bordercolor: rgba(255, 255, 255, 0.55);
 }
 
 .widget {
