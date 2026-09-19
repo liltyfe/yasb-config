@@ -200,8 +200,8 @@ widgets:
   audio_visualizer:
     type: "yasb.audio_visualizer.AudioVisualizerWidget"
     options:
-      style: "waves"
-      height: 20
+      style: "bars"
+      height: 16
       smoothness: 70
       sensitivity: 50
       auto_gain: true
@@ -210,10 +210,15 @@ widgets:
       freq_max: 12000
       hide_idle: true
       hide_idle_after: 2000
-      channels: "stereo"
+      channels: "mono"
+      mono_option: "average"
       reverse: false
-      mirror: false
+      mirror: true
       edge_fade: 0
+      bars:
+        count: 12
+        width: 2
+        gap: 3
       waves:
         width: 120
   clock:
