@@ -51,11 +51,10 @@
    Media shares the left island while retaining its thumbnail artwork.
 ============================== */
 .yasb-bar.adaptive {
-    /* Dark glass pane: brighter top sheen, denser tint, stronger rim.
-       Native bar blur stays off so gaps show the desktop directly. */
+    /* Low-opacity cool tint so the wallpaper transmits; white stop keeps the top sheen. */
     background-color: linear-gradient(
-        rgba(255, 255, 255, 0.28),
-        rgba(var(--yasb-background-rgb), 0.42)
+        rgba(255, 255, 255, 0.20),
+        rgba(146, 173, 194, 0.12)
     );
     border: none;
     border-radius: 0;
@@ -69,9 +68,9 @@
     /* Keep the window at the configured bar height without edge extensions. */
     -qproperty-edgeradius: 0;
 
-    /* Contour stroke off: the adaptive inner border breaks at concave fillets. */
-    -qproperty-borderwidth: 0;
-    -qproperty-bordercolor: transparent;
+    /* Engine contour stroke: 2.0.8 renders it continuously through the fillets. */
+    -qproperty-borderwidth: 1;
+    -qproperty-bordercolor: rgba(255, 255, 255, 0.35);
 }
 
 .widget {
