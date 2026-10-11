@@ -124,7 +124,7 @@
     font-size: 14px;
 }
 .wallpapers-widget {
-    padding: 0 6px 0 6px;
+    padding: 0 2px 0 2px;
 }
 .wallpapers-gallery-window {
     background-color: rgba(var(--yasb-background-rgb), 0.56);

@@ -3,7 +3,7 @@
 ============================== */
 
 .control-center-widget {
-    padding: 0 6px;
+    padding: 0 2px;
 }
 
 .control-center-widget .widget-container {
@@ -12,7 +12,7 @@
     box-shadow: none;
     margin: 4px 0;
     border-radius: 10px;
-    padding: 0 9px;
+    padding: 0 4px;
 }
 
 .control-center-widget .widget-container:hover {

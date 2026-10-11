@@ -3,7 +3,7 @@
 ============================== */
 
 .todo-widget {
-    padding: 0 6px;
+    padding: 0 2px;
 }
 
 .todo-widget .widget-container {
@@ -12,7 +12,7 @@
     border-radius: 10px;
     box-shadow: none;
     margin: 4px 0;
-    padding: 0 7px;
+    padding: 0 4px;
 }
 
 .todo-widget .label,

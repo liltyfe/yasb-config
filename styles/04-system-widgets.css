@@ -1,7 +1,7 @@
 .traffic-widget,
 .cpu-widget,
 .memory-widget {
-    padding: 0 4px;
+    padding: 0 2px;
 }
 
 .traffic-widget .widget-container,
@@ -11,7 +11,7 @@
     background-color: transparent;
     margin: 4px 0;
     border-radius: 12px;
-    padding: 0 8px;
+    padding: 0 4px;
 }
 
 .traffic-widget .label,
@@ -94,7 +94,7 @@
 ============================== */
 
 .bluetooth-widget {
-    padding: 0 6px;
+    padding: 0 2px;
 }
 
 .bluetooth-widget .widget-container {
@@ -103,7 +103,7 @@
     box-shadow: none;
     margin: 4px 0;
     border-radius: 10px;
-    padding: 0 10px;
+    padding: 0 4px;
 }
 
 .bluetooth-widget .widget-container:hover {
@@ -121,7 +121,7 @@
 
 .bluetooth-widget .label span,
 .bluetooth-widget .icon {
-    margin-right: 6px;
+    margin-right: 4px;
     font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono";
     font-size: 14px;
 }
@@ -137,7 +137,7 @@
 ============================== */
 
 .wifi-widget {
-    padding: 0 6px;
+    padding: 0 2px;
 }
 
 .wifi-widget .widget-container {
@@ -145,7 +145,7 @@
     background-color: transparent;
     margin: 4px 0;
     border-radius: 12px;
-    padding: 0 10px;
+    padding: 0 4px;
 }
 
 .wifi-widget .label {
@@ -157,7 +157,7 @@
 
 .wifi-widget .label span,
 .wifi-widget .icon {
-    margin-right: 6px;
+    margin-right: 4px;
     font-family: "JetBrainsMono NFP", "Symbols Nerd Font Mono";
     font-size: 14px;
 }
