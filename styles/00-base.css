@@ -51,19 +51,20 @@
    Media shares the left island while retaining its thumbnail artwork.
 ============================== */
 .yasb-bar.adaptive {
-    /* Low-opacity cool tint so the wallpaper transmits; white stop keeps the top sheen. */
+    /* Glass pane: specular top, cool frost middle, dark contact shadow at the base. */
     background-color: linear-gradient(
-        rgba(255, 255, 255, 0.20),
-        rgba(146, 173, 194, 0.12)
+        rgba(255, 255, 255, 0.32) 0%,
+        rgba(168, 196, 214, 0.14) 50%,
+        rgba(12, 22, 32, 0.30) 100%
     );
     border: none;
     border-radius: 0;
 
     /* Island geometry: 32px bar height permits a radius up to 14px. */
     -qproperty-islands: true;
-    -qproperty-railheight: 4;
-    -qproperty-islandradius: 12;
-    -qproperty-grouppadding: 8;
+    -qproperty-railheight: 2;
+    -qproperty-islandradius: 14;
+    -qproperty-grouppadding: 12;
 
     /* Keep the window at the configured bar height without edge extensions. */
     -qproperty-edgeradius: 0;
