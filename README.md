@@ -1,38 +1,60 @@
-# YASB 2.0.7 亚克力桌面状态栏配置
+# YASB 2.0.8 亚克力桌面状态栏配置
 
-一套面向 Windows 11 与 [YASB Reborn](https://yasb.dev/) 2.0.7 的个人状态栏配置。
+一套面向 Windows 11 与 [YASB Reborn](https://yasb.dev/) 2.0.8 的个人状态栏配置。
 
-主题以 Windows 动态强调色为基础，使用 Adaptive Bar 岛屿、半透明系统底色蒙版、DWM 模糊和圆角构建轻量亚克力界面。配置包含重新设计的媒体播放器、立体声音频可视化、Control Center、Todo、Quick Launch、窗口切换器、壁纸画廊、任务栏、硬件状态和电源菜单。
+主题以 Windows 动态强调色为基础，状态栏使用 Adaptive Bar 岛屿、三段明暗渐变、细轨与轮廓描边，弹窗结合半透明蒙版、DWM 模糊和圆角构建亚克力界面。配置包含重新设计的媒体播放器、镜像柱状音频可视化、Control Center、Todo、Quick Launch、窗口切换器、壁纸画廊、任务栏、硬件状态和电源菜单。
 
-> 当前配置默认在所有未单独分配的显示器上显示。YASB 的程序版本建议使用 2.0.7；Adaptive Bar、音频可视化等组件在较旧版本中不可用。
+> 当前配置默认在所有未单独分配的显示器上显示。YASB 的程序版本建议使用 2.0.8；Adaptive Bar、音频可视化等组件在较旧版本中不可用。
 
 演示视频（及安装教程）：<https://www.bilibili.com/video/BV1vCb26hEun/?vd_source=958633e12684eb6031a43772ebfbd213#reply310765040497>
 
 ## 效果预览
 
-![YASB 2.0.7 桌面效果](img/2.0.7overview/2.0.7版本效果图.png)
+以下为 YASB 2.0.8 的预览效果；本机应用图标和壁纸可按需替换。
+
+### 深色模式
+
+![YASB 2.0.8 深色桌面整体效果](img/2.0.8/整体效果-深色.png)
+
+![YASB 2.0.8 深色状态栏细节](img/2.0.8/bar效果-深色.png)
+
+### 浅色模式
+
+![YASB 2.0.8 浅色桌面整体效果](img/2.0.8/整体效果-浅色.png)
+
+![YASB 2.0.8 浅色状态栏细节](img/2.0.8/bar效果-浅色.png)
 
 ### Control Center
 
 Control Center 集成勿扰、系统静音、麦克风静音、截图、触摸键盘、深浅模式、亮度、音量、麦克风、电源计划和媒体控制。主面板及二、三级菜单统一为无阴影亚克力风格。
 
+![Control Center 控制中心](img/2.0.8/control-center-preview.png)
+
 ### 媒体播放器与音频可视化
 
-状态栏继续使用经典 `MediaWidget`，保留专辑封面、标题滚动、内嵌播放控制和进度条；右侧紧邻立体声波形可视化。右键弹出的播放器经过重新布局，使用更大的封面、圆形控制键、播放进度和应用音量滑杆。
+状态栏继续使用经典 `MediaWidget`，保留专辑封面、标题滚动、内嵌播放控制和进度条；右侧紧邻镜像柱状频谱。右键弹出的播放器经过重新布局，使用更大的封面、圆形控制键、播放进度和应用音量滑杆。
+
+![媒体播放器弹窗](img/2.0.8/media-preview.png)
 
 ### Todo
 
 Todo 支持新增、编辑、分类、完成、删除和排序任务。任务类别包括常规、尽快完成、今日、紧急和重要。
 
+![Todo 任务管理](img/2.0.8/todo-preview.png)
+
 ### Quick Launch 与窗口切换
 
 按 `Alt + Space` 打开 Quick Launch，搜索应用、文件、系统设置和最近项目。
 
-按 `Alt + W` 打开窗口切换器。
+按 `Alt + W` 使用窗口切换器，当前配置采用应用图标视图。
+
+![窗口切换器](img/2.0.8/app视图切换效果.png)
 
 ### 电源菜单与任务栏菜单
 
 点击最右侧电源图标可打开关机、重启、退出登录、休眠和睡眠菜单。任务栏应用支持右键菜单。
+
+![电源菜单](img/2.0.8/power-menu.png)
 
 ## 功能亮点
 
@@ -40,7 +62,7 @@ Todo 支持新增、编辑、分类、完成、删除和排序任务。任务类
 - **系统动态配色**：`system_colors: true` 会读取 Windows 强调色、背景色和前景色。
 - **白色亚克力蒙版**：弹窗主要使用固定的白色 `rgba()` 调整透明度，避免主题变量造成过深黑色遮罩。
 - **无残留阴影**：交互面板使用 `box-shadow: none`，避免 Qt 在悬停或点击后留下黑色矩形。
-- **音频可视化**：原生 WASAPI 立体声波形，空闲约 2 秒后自动收起。
+- **音频可视化**：原生 WASAPI 单声道混合、镜像柱状频谱，空闲约 2 秒后自动收起。
 - **Control Center**：在一个面板中集中管理常用系统开关、滑杆、电源和媒体。
 - **经典媒体栏 + 新弹窗样式**：保留旧媒体组件的状态栏控制方式，同时重新设计播放器弹窗。
 - **Todo 任务管理**：直接从状态栏新增、分类和完成任务。
@@ -77,7 +99,8 @@ Todo 支持新增、编辑、分类、完成、删除和排序任务。任务类
 
 当前栏使用 `style: "adaptive"`，原生模糊已关闭，因此岛屿之间会直接露出桌面。
 
-- 左、中、右三组组件各自形成岛屿，外缘保留 4px 轨道。
+- 左、中、右三组组件各自形成岛屿，外缘保留 2px 细轨，岛屿圆角为 14px。
+- 岛屿使用竖向三段渐变和 1px 半透明轮廓描边，组件间距经过收窄。
 - 媒体播放器与音频可视化共用左侧岛屿，不再额外绘制胶囊底色。
 - 岛屿形状由 `styles/00-base.css` 中的 `-qproperty-*` 控制，保存后会随样式热重载。
 
@@ -93,7 +116,7 @@ Todo 支持新增、编辑、分类、完成、删除和排序任务。任务类
 ### 音频可视化
 
 - 使用原生 WASAPI loopback，跟随 Windows 当前默认播放设备。
-- 当前样式为立体声 `waves`，宽度 120px，强调色纵向渐变。
+- 当前样式为 `bars`：左右声道取平均混合为单声道，启用镜像；配置 12 根柱条，柱宽 2px、间隔 3px、高度 16px，使用强调色纵向渐变。
 - `hide_idle: true`：无音频约 2 秒后自动收起，播放恢复时重新出现。
 - 仅捕获经过 Windows 共享混音器的声音；ASIO 等直通输出不会显示波形。
 
@@ -104,7 +127,7 @@ Todo 支持新增、编辑、分类、完成、删除和排序任务。任务类
 - 支持常规、尽快完成、今日、紧急和重要五种分类。
 - YASB 会在配置目录生成 `todo.json` 保存任务。
 
-Todo 主面板支持原生模糊。新增/编辑任务窗口在 YASB 2.0.7 中由普通 Qt `QDialog` 实现，没有调用 DWM backdrop，因此只能通过 CSS 获得玻璃拟态，无法仅靠主题实现真正的背景模糊。
+Todo 主面板已启用原生模糊；新增/编辑窗口样式由 `styles/07-todo.css` 管理。
 
 ### Control Center
 
@@ -146,7 +169,7 @@ Todo 主面板支持原生模糊。新增/编辑任务窗口在 YASB 2.0.7 中�
 
 ### YASB
 
-安装 YASB Reborn 2.0.7：
+安装 YASB Reborn 2.0.8：
 
 ```powershell
 winget install --id AmN.yasb
@@ -158,7 +181,7 @@ winget install --id AmN.yasb
 yasbc -v
 ```
 
-若已安装旧版本，请先升级到 2.0.7 再加载本配置。
+若已安装旧版本，请先升级到 2.0.8 再加载本配置。
 
 ### 字体
 
@@ -270,19 +293,116 @@ styles/
 | `12-calendar-popup.css` | 时钟日历弹窗 |
 | `13-audio-visualizer.css` | 音频可视化画布与强调色渐变 |
 
-> 若 Todo 能运行但仍显示默认样式，请确认 `styles.css` 末尾包含 `@import "styles/07-todo.css";`。音频可视化同理，需导入 `styles/13-audio-visualizer.css`。
+> 若 Todo 能运行但仍显示默认样式，请确认 `styles.css` 包含 `@import "styles/07-todo.css";`。音频可视化同理，需导入 `styles/13-audio-visualizer.css`。
 
 ## 本地路径与应用启动项
 
-应用启动器中包含 QQ 音乐、VS Code、Firefox、资源管理器、QQ、微信和其他本地程序。程序必须已加入 `PATH`，或在 `widgets.apps.options.app_list` 中替换为本机绝对路径。
+### 先确认修改的是生效配置
 
-壁纸组件默认使用：
+默认生效目录是 `%USERPROFILE%\.config\yasb\`。如果把仓库克隆在该目录下的 `yasb-config/` 中，仓库里的 `config.yaml` 与上一级正在使用的 `config.yaml` 是两份文件。修改仓库后，需要按「安装」一节重新复制配置，才能应用到状态栏。
 
-```yaml
-image_path: "wallpapers"
+可以在 PowerShell 中查看 YASB 使用的配置目录：
+
+```powershell
+yasbc --config
 ```
 
-请在实际 YASB 配置目录准备 `wallpapers/`。如果相对路径无法识别，请改成绝对路径。
+### 应用启动器配置
+
+中间区域的应用图标来自 `widgets.apps.options.app_list`。每一项的 `icon` 决定显示图标，`launch` 指定要启动的程序；列表顺序就是图标排列顺序。
+
+仓库当前提供以下启动项，请按本机安装情况调整：
+
+| 应用 | 当前 `launch` | 注意事项 |
+| --- | --- | --- |
+| Windows Terminal | `wt` | 需要安装 Windows Terminal，且命令可被找到 |
+| QQ 音乐 | `QQMusic.exe` | 可改为本机 QQ 音乐可执行文件的完整路径 |
+| VS Code | `Code.exe` | 需要能找到该可执行文件，或填写实际安装路径 |
+| Firefox | `firefox.exe` | 可改为 Firefox 安装目录中的可执行文件路径 |
+| 文件资源管理器 | `explorer` | 通常可直接使用 |
+| QQ | `QQ.exe` | 不同安装方式的路径可能不同 |
+| 微信 | `Weixin.exe` | 请核对本机实际文件名，旧版本可能不同 |
+| 本地代理客户端 | `CLASHN~1.EXE` | 这是原作者机器上的短文件名，建议替换为本机实际路径或删除此项 |
+
+不使用的应用可以直接删除对应列表项。新增应用时，复制一项并修改 `icon` 与 `launch` 即可；图标需要所用 Nerd Font 包含对应字符。
+
+### 使用命令名或绝对路径
+
+使用 `QQMusic.exe` 这类命令名时，程序所在目录应当能通过 YASB 进程的 `PATH` 找到。先在 PowerShell 中检查：
+
+```powershell
+Get-Command QQMusic.exe, Code.exe, firefox.exe, QQ.exe, Weixin.exe -ErrorAction SilentlyContinue |
+    Select-Object Name, Source
+```
+
+没有输出的程序，可以从快捷方式的「属性 → 目标」或安装目录找到实际 `.exe` 路径。PowerShell 中的自定义函数、别名不等于 YASB 可以直接执行的程序；应优先使用查询得到的可执行文件路径。
+
+如果不想修改 `PATH`，直接填写绝对路径。以下仅演示写法，请将路径换成本机真实位置，并合并到已有的 `apps` 配置中：
+
+```yaml
+  apps:
+    type: "yasb.applications.ApplicationsWidget"
+    options:
+      label: "{data}"
+      app_list:
+        - icon: "\uf489"
+          launch: "wt"
+        - icon: "\uf001"
+          launch: 'D:\Apps\QQMusic\QQMusic.exe'
+        - icon: "\uf07b"
+          launch: "explorer"
+```
+
+Windows 路径建议使用 YAML 单引号，避免反斜杠被当作转义符。例如 `'D:\Apps\QQMusic\QQMusic.exe'`；如果使用双引号，则反斜杠需要写成 `\\`。
+
+路径含空格、且需要显式通过 Windows `start` 启动时，可以使用以下写法：
+
+```yaml
+        - icon: "\udb80\ude39"
+          launch: 'cmd.exe /c start "" "C:\Program Files\Mozilla Firefox\firefox.exe"'
+```
+
+`start` 后面的第一个 `""` 是空窗口标题，后面的引号才包住程序路径。不要把整条命令作为文件路径交给 `Test-Path`。
+
+可以先验证文件存在，再单独试运行：
+
+```powershell
+$appPath = 'C:\Program Files\Mozilla Firefox\firefox.exe'
+Test-Path -LiteralPath $appPath
+& $appPath
+```
+
+如果刚修改了系统或用户 `PATH`，需要退出并重新启动 YASB，让新进程获得更新后的环境变量。仅修改 YAML 中的启动路径时，保存后可执行 `yasbc reload`。
+
+### 壁纸目录
+
+壁纸路径位于 `widgets.wallpapers.options.image_path`，仓库默认值为：
+
+```yaml
+      image_path: 'wallpapers/'
+```
+
+请自行准备壁纸文件夹；`img/2.0.8/` 存放的是 README 预览截图，不是壁纸组件的数据目录。可以先在默认配置目录下创建文件夹：
+
+```powershell
+$wallpaperDir = Join-Path $env:USERPROFILE '.config\yasb\wallpapers'
+New-Item -ItemType Directory -Path $wallpaperDir -Force | Out-Null
+```
+
+将壁纸图片放入其中。如果相对路径无法识别，或壁纸存放在其他磁盘，推荐填写明确的绝对路径：
+
+```yaml
+      image_path: 'D:\Pictures\Wallpapers'
+```
+
+若使用 OneDrive 等同步目录，请确保图片已下载到本机，可以在文件资源管理器中正常打开。迁移到其他电脑时，需要重新核对用户名、盘符与目录位置。
+
+### 修改后检查
+
+1. 确认路径指向实际存在的文件或目录；应用路径应指向 `.exe`，壁纸路径应指向文件夹。
+2. 保持 YAML 缩进，编辑现有字段，避免重复添加整个 `widgets` 或 `apps` 节点。
+3. 保存生效配置并运行 `yasbc reload`，点击应用图标、按 `Alt + P` 打开壁纸画廊验证。
+4. 若仍无响应，运行 `yasbc log` 查看操作时的错误信息；按 `Ctrl + C` 结束日志查看。
 
 ## 多显示器
 
@@ -317,8 +437,7 @@ Quick Launch 固定在主屏打开；窗口切换器和壁纸画廊跟随鼠标�
 
 ## 已知限制
 
-- Adaptive Bar、音频可视化与壁纸过渡引擎要求 YASB 2.0.7。
-- Todo 新增/编辑窗口是普通 Qt `QDialog`，无法仅通过 CSS 获得真正的 DWM 亚克力。
+- 本配置面向 YASB 2.0.8；使用其他版本时，组件行为和岛屿边框效果可能不同。
 - 音频可视化只捕获 Windows 共享混音器中的声音，ASIO 等直通输出不会显示。
 - 媒体时间轴和应用音量依赖播放器向 Windows 媒体 API 提供数据。
 - 壁纸过渡动画依赖系统动画效果；4K 及以上大图偶尔可能出现闪一下旧壁纸。
